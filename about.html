@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Name - Acasă</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css"> </head>
+<body class="font-sans antialiased text-gray-800">
+
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <a href="index.html" class="mb-4 md:mb-0">
+                <img src="./images/logo.png" alt="Logo BUSINESS NAME" class="h-32 w-auto max-w-full">
+            </a>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium">HOME</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium">ABOUT</a></li>
+                    <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium">BUSINESS GROW</a></li>
+                    <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium">PERSONAL GROW</a></li>
+                    <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium">INSIGHTS</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden absolute top-4 right-4 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 pb-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">HOME</a></li>
+                <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">ABOUT</a></li>
+                <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">BUSINESS GROW</a></li>
+                <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">PERSONAL GROW</a></li>
+                <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">INSIGHTS</a></li>
+                <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="flex flex-col">
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
+                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+1+-+People+Growth'); background-size: cover; background-position: center;">
+                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Growth that starts with people</h2>
+                    <p class="text-xl md:text-2xl mb-8">Because when people grow, everything does.</p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                        <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Businesses</a>
+                        <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Individuals</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
+                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+2+-+Purpose+Culture'); background-size: cover; background-position: center;">
+                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Lead with Purpose. Live Your Culture. Deliver Results.</h2>
+                    <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
+                </div>
+            </div>
+
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
+                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+3+-+Personal+Story'); background-size: cover; background-position: center;">
+                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Own your story. Lead yourself. Grow on purpose.</h2>
+                    <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Start Now</a>
+                </div>
+            </div>
+
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
+                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+4+-+People+Culture+Growth'); background-size: cover; background-position: center;">
+                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">People First. Culture Forward. Accelerate Growth.</h2>
+                    <a href="about.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
+                </div>
+            </div>
+
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
+                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+5+-+Contact'); background-size: cover; background-position: center;">
+                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-8">Contact</h2>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                        <button id="btn-contact-business" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About Businesses</button>
+                        <button id="btn-contact-individuals" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About You</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-forms-container" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+            <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
+                <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+                
+                <div id="form-business" class="hidden">
+                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="business-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
+                            <select id="business-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selectează o provocare</option>
+                                <option value="Culture misalignment">Culture misalignment</option>
+                                <option value="Low engagement">Low engagement</option>
+                                <option value="Leadership gaps">Leadership gaps</option>
+                                <option value="Team conflict">Team conflict</option>
+                                <option value="Change fatigue">Change fatigue</option>
+                                <option value="Poor collaboration">Poor collaboration</option>
+                                <option value="Unclear roles">Unclear roles</option>
+                                <option value="Communication issues">Communication issues</option>
+                                <option value="Resistance to change">Resistance to change</option>
+                                <option value="Capability gaps">Capability gaps</option>
+                                <option value="Underperformance">Underperformance</option>
+                                <option value="New management">New management</option>
+                                <option value="Scaling challenges">Scaling challenges</option>
+                                <option value="Strategy execution">Strategy execution</option>
+                                <option value="Low trust">Low trust</option>
+                                <option value="High turnover">High turnover</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+                    </form>
+                </div>
+
+                <div id="form-individuals" class="hidden">
+                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="individual-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
+                            <select id="individual-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selectează o provocare</option>
+                                <option value="Overgiving">Overgiving</option>
+                                <option value="Avoidant patterns">Avoidant patterns</option>
+                                <option value="Poor communication">Poor communication</option>
+                                <option value="Feeling disconnected">Feeling disconnected</option>
+                                <option value="Conflict in relationships">Conflict in relationships</option>
+                                <option value="People-pleasing">People-pleasing</option>
+                                <option value="Midlife shift">Midlife shift</option>
+                                <option value="Starting over">Starting over</option>
+                                <option value="Career change">Career change</option>
+                                <option value="Pursuing meaning">Pursuing meaning</option>
+                                <option value="Living on autopilot">Living on autopilot</option>
+                                <option value="No time for others">No time for others</option>
+                                <option value="No time for self">No time for self</option>
+                                <option value="Longing connection">Longing connection</option>
+                                <option value="Boundaries">Boundaries</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section-placeholder" class="py-20 bg-gray-100 text-center">
+            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina About.</h2>
+            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">about.html</code>.</p>
+        </section>
+        
+        <section id="business-grow-section-placeholder" class="py-20 bg-white text-center">
+            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Business Grow.</h2>
+            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">business-grow.html</code>.</p>
+        </section>
+
+        <section id="personal-grow-section-placeholder" class="py-20 bg-gray-100 text-center">
+            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Personal Grow.</h2>
+            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">personal-grow.html</code>.</p>
+        </section>
+
+        <section id="insights-section-placeholder" class="py-20 bg-white text-center">
+            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Insights.</h2>
+            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">insights.html</code>.</p>
+        </section>
+
+        <section id="contact-section-fallback" class="py-20 bg-gray-100 text-center">
+            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Contact.</h2>
+            <p class="mt-4">Conținutul real (dacă nu e gestionat integral de pop-up-uri) va fi în fișierul <code class="bg-gray-200 p-1 rounded">contact.html</code>.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg mb-4">&copy; 2025 BUSINESS NAME. Toate drepturile rezervate.</p>
+            <div class="flex justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script> </body>
+</html>

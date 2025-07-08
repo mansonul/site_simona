@@ -1,0 +1,28 @@
+/* style.css */
+
+/* Definirea variabilelor CSS personalizate pentru fonturi */
+:root {
+    --font-heading: 'Libre Baskerville', serif; /* sau 'Playfair Display', serif; */
+    --font-body: 'Work Sans', sans-serif;
+}
+
+/* Aplicarea fonturilor la nivel global */
+body {
+    font-family: var(--font-body);
+}
+
+/* Aplicarea fonturilor pentru titluri (headings) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+/* Ajustări suplimentare pentru lizibilitate (opțional) */
+h1 { font-size: 3rem; /* Exemplu: ajustare dimensiune H1 */ }
+h2 { font-size: 2.5rem; /* Exemplu: ajustare dimensiune H2 */ }
+/* Poți adăuga și alte stiluri aici */
+
+/* Ajustează opacitatea pentru textul de pe bannere, dacă este necesar,
+   pentru o lizibilitate mai bună cu noile imagini și fonturi */
+.bg-opacity-30 {
+    background-color: rgba(0, 0, 0, 0.4); /* Creștem opacitatea la 40% */
+}
