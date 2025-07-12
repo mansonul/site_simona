@@ -1,7 +1,7 @@
 // main.js
 
+// Functionalitate pentru meniul mobil
 document.addEventListener('DOMContentLoaded', () => {
-    // Functionalitate pentru meniul mobil
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -18,49 +18,82 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Functionalitate pentru formularele de contact (pop-up)
-    const contactFormsContainer = document.getElementById('contact-forms-container');
+    // Funcționalitate pentru butoanele de contact (Business/Individual)
     const btnContactBusiness = document.getElementById('btn-contact-business');
     const btnContactIndividuals = document.getElementById('btn-contact-individuals');
+    const contactFormsContainer = document.getElementById('contact-forms-container');
+    const closeContactForms = document.getElementById('close-contact-forms');
     const formBusiness = document.getElementById('form-business');
     const formIndividuals = document.getElementById('form-individuals');
-    const closeContactFormsButton = document.getElementById('close-contact-forms');
-
-    function showForm(formToShow) {
-        contactFormsContainer.classList.remove('hidden');
-        formBusiness.classList.add('hidden');
-        formIndividuals.classList.add('hidden');
-        formToShow.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden'); // Blochează scroll-ul pe fundal
-    }
-
-    function hideForms() {
-        contactFormsContainer.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden'); // Reactivează scroll-ul
-    }
 
     if (btnContactBusiness) {
         btnContactBusiness.addEventListener('click', () => {
-            showForm(formBusiness);
+            contactFormsContainer.classList.remove('hidden');
+            formBusiness.classList.remove('hidden');
+            formIndividuals.classList.add('hidden'); // Asigură-te că celălalt formular este ascuns
         });
     }
 
     if (btnContactIndividuals) {
         btnContactIndividuals.addEventListener('click', () => {
-            showForm(formIndividuals);
+            contactFormsContainer.classList.remove('hidden');
+            formIndividuals.classList.remove('hidden');
+            formBusiness.classList.add('hidden'); // Asigură-te că celălalt formular este ascuns
         });
     }
 
-    if (closeContactFormsButton) {
-        closeContactFormsButton.addEventListener('click', hideForms);
+    if (closeContactForms) {
+        closeContactForms.addEventListener('click', () => {
+            contactFormsContainer.classList.add('hidden');
+            formBusiness.classList.add('hidden');
+            formIndividuals.classList.add('hidden');
+        });
     }
 
-    // Închide formularul și la click în afara lui (pe overlay)
-    if (contactFormsContainer) {
-        contactFormsContainer.addEventListener('click', (event) => {
-            if (event.target === contactFormsContainer) {
-                hideForms();
+    // Funcționalitate pentru dropdown-urile cu selecție multiplă
+    function setupMultiSelectDropdown(toggleId, optionsId, selectedTextId) {
+        const dropdownToggle = document.getElementById(toggleId);
+        const dropdownOptions = document.getElementById(optionsId);
+        const selectedTextSpan = document.getElementById(selectedTextId);
+        const checkboxes = dropdownOptions ? dropdownOptions.querySelectorAll('input[type="checkbox"]') : [];
+
+        if (dropdownToggle && dropdownOptions) {
+            dropdownToggle.addEventListener('click', () => {
+                dropdownOptions.classList.toggle('hidden');
+            });
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    const selectedValues = Array.from(checkboxes)
+                        .filter(cb => cb.checked)
+                        .map(cb => cb.value);
+
+                    if (selectedValues.length === 0) {
+                        selectedTextSpan.textContent = selectedTextSpan.dataset.placeholder || 'Selectează o provocare';
+                        selectedTextSpan.classList.remove('text-gray-900');
+                        selectedTextSpan.classList.add('text-gray-700');
+                    } else {
+                        selectedTextSpan.textContent = selectedValues.join(', ');
+                        selectedTextSpan.classList.remove('text-gray-700');
+                        selectedTextSpan.classList.add('text-gray-900');
+                    }
+                });
+            });
+
+            // Adaugă placeholder-ul inițial ca data attribute
+            if (selectedTextSpan) {
+                selectedTextSpan.dataset.placeholder = selectedTextSpan.textContent;
             }
-        });
+
+            // Închide dropdown-ul dacă se dă click în afara lui
+            document.addEventListener('click', (event) => {
+                if (!dropdownToggle.contains(event.target) && !dropdownOptions.contains(event.target)) {
+                    dropdownOptions.classList.add('hidden');
+                }
+            });
+        }
     }
+
+    setupMultiSelectDropdown('business-challenge-dropdown-toggle', 'business-challenge-options', 'selected-business-challenges');
+    setupMultiSelectDropdown('individual-challenge-dropdown-toggle', 'individual-challenge-options', 'selected-individual-challenges');
 });

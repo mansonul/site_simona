@@ -122,93 +122,196 @@
         </section>
 
         <section id="contact-forms-container" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
-                <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
-                
-                <div id="form-business" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="business-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="business-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Culture misalignment">Culture misalignment</option>
-                                <option value="Low engagement">Low engagement</option>
-                                <option value="Leadership gaps">Leadership gaps</option>
-                                <option value="Team conflict">Team conflict</option>
-                                <option value="Change fatigue">Change fatigue</option>
-                                <option value="Poor collaboration">Poor collaboration</option>
-                                <option value="Unclear roles">Unclear roles</option>
-                                <option value="Communication issues">Communication issues</option>
-                                <option value="Resistance to change">Resistance to change</option>
-                                <option value="Capability gaps">Capability gaps</option>
-                                <option value="Underperformance">Underperformance</option>
-                                <option value="New management">New management</option>
-                                <option value="Scaling challenges">Scaling challenges</option>
-                                <option value="Strategy execution">Strategy execution</option>
-                                <option value="Low trust">Low trust</option>
-                                <option value="High turnover">High turnover</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
-                </div>
+    <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
+        <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
 
-                <div id="form-individuals" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="individual-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="individual-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Overgiving">Overgiving</option>
-                                <option value="Avoidant patterns">Avoidant patterns</option>
-                                <option value="Poor communication">Poor communication</option>
-                                <option value="Feeling disconnected">Feeling disconnected</option>
-                                <option value="Conflict in relationships">Conflict in relationships</option>
-                                <option value="People-pleasing">People-pleasing</option>
-                                <option value="Midlife shift">Midlife shift</option>
-                                <option value="Starting over">Starting over</option>
-                                <option value="Career change">Career change</option>
-                                <option value="Pursuing meaning">Pursuing meaning</option>
-                                <option value="Living on autopilot">Living on autopilot</option>
-                                <option value="No time for others">No time for others</option>
-                                <option value="No time for self">No time for self</option>
-                                <option value="Longing connection">Longing connection</option>
-                                <option value="Boundaries">Boundaries</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
+        <div id="form-business" class="hidden">
+            <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
-            </div>
-        </section>
+                <div>
+                    <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="relative">
+                    <div id="business-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <span id="selected-business-challenges" class="text-gray-700">What’s your current challenge?</span>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div id="business-challenge-options" class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-culture-misalignment" value="Culture misalignment" class="mr-2">
+                            <label for="bc-culture-misalignment" class="flex-grow cursor-pointer">Culture misalignment</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-low-engagement" value="Low engagement" class="mr-2">
+                            <label for="bc-low-engagement" class="flex-grow cursor-pointer">Low engagement</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-leadership-gaps" value="Leadership gaps" class="mr-2">
+                            <label for="bc-leadership-gaps" class="flex-grow cursor-pointer">Leadership gaps</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-team-conflict" value="Team conflict" class="mr-2">
+                            <label for="bc-team-conflict" class="flex-grow cursor-pointer">Team conflict</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-change-fatigue" value="Change fatigue" class="mr-2">
+                            <label for="bc-change-fatigue" class="flex-grow cursor-pointer">Change fatigue</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-poor-collaboration" value="Poor collaboration" class="mr-2">
+                            <label for="bc-poor-collaboration" class="flex-grow cursor-pointer">Poor collaboration</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-unclear-roles" value="Unclear roles" class="mr-2">
+                            <label for="bc-unclear-roles" class="flex-grow cursor-pointer">Unclear roles</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-communication-issues" value="Communication issues" class="mr-2">
+                            <label for="bc-communication-issues" class="flex-grow cursor-pointer">Communication issues</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-resistance-to-change" value="Resistance to change" class="mr-2">
+                            <label for="bc-resistance-to-change" class="flex-grow cursor-pointer">Resistance to change</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-capability-gaps" value="Capability gaps" class="mr-2">
+                            <label for="bc-capability-gaps" class="flex-grow cursor-pointer">Capability gaps</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-underperformance" value="Underperformance" class="mr-2">
+                            <label for="bc-underperformance" class="flex-grow cursor-pointer">Underperformance</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-new-management" value="New management" class="mr-2">
+                            <label for="bc-new-management" class="flex-grow cursor-pointer">New management</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-scaling-challenges" value="Scaling challenges" class="mr-2">
+                            <label for="bc-scaling-challenges" class="flex-grow cursor-pointer">Scaling challenges</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-strategy-execution" value="Strategy execution" class="mr-2">
+                            <label for="bc-strategy-execution" class="flex-grow cursor-pointer">Strategy execution</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-low-trust" value="Low trust" class="mr-2">
+                            <label for="bc-low-trust" class="flex-grow cursor-pointer">Low trust</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-high-turnover" value="High turnover" class="mr-2">
+                            <label for="bc-high-turnover" class="flex-grow cursor-pointer">High turnover</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="bc-not-sure-yet" value="Not sure yet" class="mr-2">
+                            <label for="bc-not-sure-yet" class="flex-grow cursor-pointer">Not sure yet</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+            </form>
+        </div>
+
+        <div id="form-individuals" class="hidden">
+            <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="relative">
+                    <div id="individual-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <span id="selected-individual-challenges" class="text-gray-700">What’s your current challenge?</span>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div id="individual-challenge-options" class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-overgiving" value="Overgiving" class="mr-2">
+                            <label for="ic-overgiving" class="flex-grow cursor-pointer">Overgiving</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-avoidant-patterns" value="Avoidant patterns" class="mr-2">
+                            <label for="ic-avoidant-patterns" class="flex-grow cursor-pointer">Avoidant patterns</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-poor-communication" value="Poor communication" class="mr-2">
+                            <label for="ic-poor-communication" class="flex-grow cursor-pointer">Poor communication</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-feeling-disconnected" value="Feeling disconnected" class="mr-2">
+                            <label for="ic-feeling-disconnected" class="flex-grow cursor-pointer">Feeling disconnected</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-conflict-in-relationships" value="Conflict in relationships" class="mr-2">
+                            <label for="ic-conflict-in-relationships" class="flex-grow cursor-pointer">Conflict in relationships</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-people-pleasing" value="People-pleasing" class="mr-2">
+                            <label for="ic-people-pleasing" class="flex-grow cursor-pointer">People-pleasing</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-midlife-shift" value="Midlife shift" class="mr-2">
+                            <label for="ic-midlife-shift" class="flex-grow cursor-pointer">Midlife shift</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-starting-over" value="Starting over" class="mr-2">
+                            <label for="ic-starting-over" class="flex-grow cursor-pointer">Starting over</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-career-change" value="Career change" class="mr-2">
+                            <label for="ic-career-change" class="flex-grow cursor-pointer">Career change</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-pursuing-meaning" value="Pursuing meaning" class="mr-2">
+                            <label for="ic-pursuing-meaning" class="flex-grow cursor-pointer">Pursuing meaning</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-living-on-autopilot" value="Living on autopilot" class="mr-2">
+                            <label for="ic-living-on-autopilot" class="flex-grow cursor-pointer">Living on autopilot</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-no-time-for-others" value="No time for others" class="mr-2">
+                            <label for="ic-no-time-for-others" class="flex-grow cursor-pointer">No time for others</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-no-time-for-self" value="No time for self" class="mr-2">
+                            <label for="ic-no-time-for-self" class="flex-grow cursor-pointer">No time for self</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-longing-connection" value="Longing connection" class="mr-2">
+                            <label for="ic-longing-connection" class="flex-grow cursor-pointer">Longing connection</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-boundaries" value="Boundaries" class="mr-2">
+                            <label for="ic-boundaries" class="flex-grow cursor-pointer">Boundaries</label>
+                        </div>
+                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                            <input type="checkbox" id="ic-not-sure-yet" value="Not sure yet" class="mr-2">
+                            <label for="ic-not-sure-yet" class="flex-grow cursor-pointer">Not sure yet</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="bg-gray-900 text-white py-10">
