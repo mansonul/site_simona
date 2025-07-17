@@ -1,7 +1,8 @@
 // main.js
 
-// Functionalitate pentru meniul mobil
+// Functionalitate principala, se executa dupa incarcarea completa a DOM-ului
 document.addEventListener('DOMContentLoaded', () => {
+    // Functionalitate pentru meniul mobil
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -18,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Funcționalitate pentru butoanele de contact (Business/Individual)
-    const btnContactBusiness = document.getElementById('btn-contact-business'); // Buton generic de Business
-    const btnContactIndividuals = document.getElementById('btn-contact-individuals'); // Buton generic pentru Individuali
+    // Funcționalitate pentru butoanele de contact (Business/Individual) și formulare
+    const btnContactBusiness = document.getElementById('btn-contact-business'); // Buton generic de Business (poate exista pe index.html)
+    const btnContactIndividuals = document.getElementById('btn-contact-individuals'); // Buton generic pentru Individuali (poate exista pe index.html)
     const btnContactBusinessHero = document.getElementById('btn-contact-business-hero'); // Buton specific paginii business-grow.html (secțiunea Hero)
     const btnContactBusinessPage = document.getElementById('btn-contact-business-page'); // Buton specific paginii business-grow.html (secțiunea de jos)
 
@@ -29,44 +30,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const formBusiness = document.getElementById('form-business');
     const formIndividuals = document.getElementById('form-individuals');
 
+    // Functie ajutatoare pentru a deschide un formular si a-l inchide pe celalalt
+    function openContactForm(formToShow, formToHide) {
+        if (contactFormsContainer) {
+            contactFormsContainer.classList.remove('hidden');
+        }
+        if (formToShow) {
+            formToShow.classList.remove('hidden');
+        }
+        if (formToHide) {
+            formToHide.classList.add('hidden');
+        }
+    }
+
+    // Adaugă listeneri pentru butoanele de contact Business
     if (btnContactBusiness) {
         btnContactBusiness.addEventListener('click', () => {
-            contactFormsContainer.classList.remove('hidden');
-            formBusiness.classList.remove('hidden');
-            formIndividuals.classList.add('hidden'); // Asigură-te că celălalt formular este ascuns
+            openContactForm(formBusiness, formIndividuals);
         });
     }
-
-    if (btnContactIndividuals) {
-        btnContactIndividuals.addEventListener('click', () => {
-            contactFormsContainer.classList.remove('hidden');
-            formIndividuals.classList.remove('hidden');
-            formBusiness.classList.add('hidden'); // Asigură-te că celălalt formular este ascuns
-        });
-    }
-
-    // Adaugă listeneri pentru butoanele specifice de pe business-grow.html
     if (btnContactBusinessHero) {
         btnContactBusinessHero.addEventListener('click', () => {
-            contactFormsContainer.classList.remove('hidden');
-            formBusiness.classList.remove('hidden');
-            formIndividuals.classList.add('hidden');
+            openContactForm(formBusiness, formIndividuals);
         });
     }
-
     if (btnContactBusinessPage) {
         btnContactBusinessPage.addEventListener('click', () => {
-            contactFormsContainer.classList.remove('hidden');
-            formBusiness.classList.remove('hidden');
-            formIndividuals.classList.add('hidden');
+            openContactForm(formBusiness, formIndividuals);
         });
     }
 
+    // Adaugă listener pentru butonul de contact Individuals
+    if (btnContactIndividuals) {
+        btnContactIndividuals.addEventListener('click', () => {
+            openContactForm(formIndividuals, formBusiness);
+        });
+    }
+
+    // Adaugă listener pentru butonul de închidere a formularelor
     if (closeContactForms) {
         closeContactForms.addEventListener('click', () => {
-            contactFormsContainer.classList.add('hidden');
-            formBusiness.classList.add('hidden');
-            formIndividuals.classList.add('hidden');
+            if (contactFormsContainer) {
+                contactFormsContainer.classList.add('hidden');
+            }
+            if (formBusiness) {
+                formBusiness.classList.add('hidden');
+            }
+            if (formIndividuals) {
+                formIndividuals.classList.add('hidden');
+            }
         });
     }
 
@@ -77,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedTextSpan = document.getElementById(selectedTextId);
         const checkboxes = dropdownOptions ? dropdownOptions.querySelectorAll('input[type="checkbox"]') : [];
 
-        if (dropdownToggle && dropdownOptions) {
+        if (dropdownToggle && dropdownOptions && selectedTextSpan) {
             dropdownToggle.addEventListener('click', () => {
                 dropdownOptions.classList.toggle('hidden');
             });
