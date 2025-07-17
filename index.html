@@ -1,14 +1,398 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Name - Acasă</title>
+    <title>Business through people - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css"> 
+    <style>
+        /* Define your custom CSS variables for fonts here, if not already in style.css */
+        :root {
+            --font-heading: 'Playfair Display', serif; 
+            --font-body: 'Work Sans', sans-serif;
+            --color-gold-custom: #FFD700; 
+            --color-highlight-text: #E5B18D; 
+            --color-background-desktop: #222222; 
+        }
+        .text-gold-custom { color: var(--color-gold-custom); }
+        .border-gold-custom { border-color: var(--color-gold-custom); }
+        .text-highlight { color: var(--color-highlight-text); }
+
+        /* Specific styles for the main banner */
+        .hero-banner-main {
+            background-color: var(--color-background-desktop); 
+            min-height: 70vh; 
+            display: flex;
+            align-items: center; 
+            padding-top: 4rem; 
+            padding-bottom: 4rem;
+            border: none; 
+        }
+
+        .hero-content-wrapper {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            padding-left: 0; 
+            padding-right: 0;
+        }
+
+        .hero-text-column {
+            flex: 1; 
+            text-align: center; 
+            padding-left: 2rem; 
+            padding-right: 2rem;
+        }
+
+        /* Adjustments for the main H2 title (Growth that starts with People) */
+        .hero-banner-main h2 {
+            font-size: 3.5rem; 
+            line-height: 1.1; 
+            margin-bottom: 2rem; 
+        }
+        @media (min-width: 768px) {
+            .hero-banner-main h2 {
+                font-size: 3.5rem; 
+            }
+        }
+
+        /* Adjustments for the P paragraph (Because when people evolve, everything does.) */
+        .hero-banner-main p {
+            font-size: 2.35rem; 
+            line-height: 1.3; 
+            margin-bottom: 6rem; /* Space between text and buttons in the first banner */
+        }
+
+        @media (min-width: 768px) {
+            .hero-banner-main p {
+                font-size: 2.35rem; 
+                line-height: 1.3; 
+            }
+        }
+
+        /* Button styles from the first banner */
+        .hero-banner-main .banner-button-wrapper {
+            display: flex; 
+            justify-content: center; 
+            margin-top: 0; 
+            gap: 15rem; 
+        }
+
+        .banner-button { /* General class for buttons */
+            border-color: var(--color-highlight-text); 
+            color: var(--color-highlight-text); 
+            background-color: transparent; 
+            padding: 0.2rem 1.5rem; 
+            border-width: 1px; 
+            display: inline-flex; 
+            align-items: center; 
+            text-decoration: none; 
+            border-radius: 9999px; 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .banner-button:hover {
+            border-color: white; 
+            color: white; 
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+        
+        /* Styles for the second banner */
+        .second-banner {
+            position: relative; /* Adăugat pentru a poziționa overlay-ul */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 8rem; /* Pading consistent pentru a lăsa loc pentru text */
+            min-height: 100vh; /* Asigură înălțimea minimă */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .second-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.2); /* Overlay negru cu 20% opacitate */
+            z-index: 1; /* Asigură că overlay-ul este peste imagine */
+        }
+        .second-banner .relative {
+            z-index: 2; /* Asigură că textul și butoanele sunt deasupra overlay-ului */
+            position: relative;
+        }
+
+        .second-banner h2 {
+            font-size: 3.5rem; 
+            line-height: 1.1;
+            color: var(--color-background-desktop); /* Text color same as button background */
+        }
+        .second-banner .second-banner-text {
+            margin-bottom: 6rem; /* Desired space, similar to the first banner */
+        }
+
+        @media (max-width: 767px) {
+            .second-banner h2 {
+                font-size: 2rem; 
+            }
+        }
+
+        .second-banner .second-banner-button-wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1rem; 
+            margin-top: 0; /* Reset margin-top here to use margin-bottom on text */
+        }
+
+        /* Style for the "Learn More" button in the second banner */
+        .second-banner .learn-more-button {
+            border-color: var(--color-highlight-text); 
+            color: var(--color-highlight-text); 
+            background-color: var(--color-background-desktop); 
+            padding: 0.2rem 1.5rem; 
+            border-width: 1px; 
+            display: inline-flex; 
+            align-items: center; 
+            text-decoration: none; 
+            border-radius: 9999px; 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .second-banner .learn-more-button:hover {
+            border-color: white; 
+            color: white; 
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+        /* Styles for the third banner (new) */
+        .third-banner {
+            position: relative; /* Added for overlay positioning */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 8rem; /* Consistent padding to allow space for text */
+            min-height: 100vh; /* Ensures minimum height */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .third-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 20% opacity */
+            z-index: 1; /* Ensures the overlay is above the image */
+        }
+
+        .third-banner .relative {
+            z-index: 2; /* Ensures text and buttons are above the overlay */
+            position: relative;
+        }
+
+        .third-banner h2 {
+            font-size: 3.5rem; 
+            line-height: 1.1;
+            color: white; /* White text color */
+        }
+        .third-banner .third-banner-text {
+            margin-bottom: 6rem; /* Desired space, similar to the first banner */
+        }
+
+        @media (max-width: 767px) {
+            .third-banner h2 {
+                font-size: 2rem; 
+            }
+            .third-banner .third-banner-text {
+                margin-bottom: 5rem; /* Adjust here for mobile, similar to the first banner on mobile */
+            }
+        }
+        .third-banner .third-banner-button-wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1rem; 
+            margin-top: 0; /* Reset margin-top here to use margin-bottom on text */
+        }
+        /* Style for the button in the third banner */
+        .third-banner .start-now-button {
+            border-color: var(--color-highlight-text); /* Use the same color for border as highlight-text */
+            color: var(--color-highlight-text); /* Use the same color for text as highlight-text */
+            background-color: var(--color-background-desktop); /* Background similar to the other button */
+            padding: 0.2rem 1.5rem; 
+            border-width: 1px; 
+            display: inline-flex; 
+            align-items: center; 
+            text-decoration: none; 
+            border-radius: 9999px; 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .third-banner .start-now-button:hover {
+            border-color: white; 
+            color: white; 
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+        /* Styles for the fourth banner (new) */
+        .fourth-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 8rem; /* Consistent padding */
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            /* No ::before for overlay here as requested */
+        }
+
+        .fourth-banner .relative {
+            z-index: 1; /* Ensures content is above the background image */
+            position: relative;
+        }
+
+        .fourth-banner h2 {
+            font-size: 3.5rem; 
+            line-height: 1.1;
+            color: var(--color-background-desktop); /* Text color similar to second banner */
+        }
+        .fourth-banner .fourth-banner-text {
+            margin-bottom: 6rem; /* Consistent spacing */
+        }
+
+        @media (max-width: 767px) {
+            .fourth-banner h2 {
+                font-size: 2rem; 
+            }
+            .fourth-banner .fourth-banner-text {
+                margin-bottom: 5rem;
+            }
+        }
+        .fourth-banner .fourth-banner-button-wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1rem; 
+            margin-top: 0;
+        }
+
+        .fourth-banner .learn-more-button { /* Use the same style as learn-more-button from second banner */
+            border-color: var(--color-highlight-text); 
+            color: var(--color-highlight-text); 
+            background-color: var(--color-background-desktop); 
+            padding: 0.2rem 1.5rem; 
+            border-width: 1px; 
+            display: inline-flex; 
+            align-items: center; 
+            text-decoration: none; 
+            border-radius: 9999px; 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .fourth-banner .learn-more-button:hover {
+            border-color: white; 
+            color: white; 
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+
+        /* Media Queries for mobile */
+        @media (max-width: 767px) {
+            .hero-banner-main {
+                background-color: var(--color-background-desktop); 
+                padding-top: 4rem; 
+                padding-bottom: 4rem;
+                border: none; 
+                min-height: auto; 
+            }
+
+            .hero-content-wrapper {
+                flex-direction: column; 
+                align-items: center;
+                padding: 0 1rem; 
+                width: 100%; 
+            }
+
+            .hero-text-column {
+                padding-right: 0;
+                padding-left: 0;
+                width: 100%; 
+                text-align: center; 
+            }
+           
+            /* Completely remove the image column on mobile */
+            .hero-image-column {
+                display: none; 
+            }
+
+            .hero-banner-main h2 {
+                font-size: 2rem; 
+                margin-bottom: 1.5rem; 
+            }
+            
+            /* Adjust P for mobile - a proportional value to 2.35rem on desktop */
+            .hero-banner-main p {
+                font-size: 1.5rem; 
+                line-height: 1.3;
+                margin-bottom: 5rem; 
+            }
+
+            /* Buttons on mobile - REintroduce border */
+            .hero-banner-main .banner-button-wrapper {
+                flex-direction: column; 
+                space-y: 1rem; 
+                space-x: 0; 
+                width: 100%; 
+                gap: 0; 
+            }
+
+            .banner-button {
+                background-color: transparent; 
+                border-color: var(--color-highlight-text); 
+                border-width: 1px; 
+                padding: 0.75rem 1.5rem; 
+                color: var(--color-highlight-text); 
+                font-size: 1.125rem; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                width: 100%; 
+            }
+
+            .second-banner .banner-button,
+            .third-banner .banner-button,
+            .fourth-banner .banner-button { /* Apply to the fourth banner on mobile as well */
+                width: auto; 
+            }
+
+            /* Adjust mobile spacing for the second banner */
+            .second-banner .second-banner-text {
+                margin-bottom: 5rem; /* Adjust here for mobile, similar to the first banner on mobile */
+            }
+        }
+
+        /* Style for the navigation menu font */
+        nav ul li a {
+            font-family: var(--font-body); 
+        }
+
+    </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
 
@@ -17,7 +401,7 @@
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex flex-col items-center">
             <a href="index.html" class="mb-4 md:mb-0">
-                <img src="./images/logo.png" alt="Logo BUSINESS NAME" class="h-20 w-auto max-w-full">
+                <img src="./images/logo.png" alt="Business through people Logo" class="h-20 w-auto max-w-full">
             </a>
             
             <nav class="hidden md:block">
@@ -52,69 +436,80 @@
 
     <main>
         <section id="home" class="flex flex-col">
-            <div class="relative flex flex-col text-white overflow-hidden p-8 bg-black border-4 border-gold-custom">
-                <div class="flex flex-grow w-full px-4 md:px-12">
-                    <div class="flex flex-col justify-between w-full md:w-4/6 text-left md:pr-8">
-                        <h2 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight" style="font-family: var(--font-heading);">
-                            Growth that <br> starts with people
+            <div class="relative text-white overflow-hidden hero-banner-main">
+                <div class="flex flex-grow w-full hero-content-wrapper">
+                    <div class="flex flex-col justify-center w-full hero-text-column">
+                        <h2 class="font-extrabold mb-4 leading-tight" style="font-family: var(--font-heading);">
+                            Growth that starts with <span class="text-highlight italic">People</span>
                         </h2>
                         <p class="text-xl md:text-2xl mb-8 opacity-90" style="font-family: var(--font-body);">
-                            Because when people evolve, everything does.
+                            Because when people evolve,<br> everything does.
                         </p>
-                        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-8">
-                            <a href="business-grow.html" class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
-                                <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                For Organizations
+                        <div class="banner-button-wrapper flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-8">
+                            <a href="business-grow.html" class="banner-button">
+                                Organizations
                             </a>
-                            <a href="personal-grow.html" class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
-                                <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                For Individuals
+                            <a href="personal-grow.html" class="banner-button">
+                                Individuals
                             </a>
                         </div>
                     </div>
+                    </div>
+            </div>
 
-                    <div class="hidden md:flex flex-col w-full md:w-2/6 items-center justify-end md:pl-8 pb-4">
-                        <img src="./images/spiral.webp" alt="Golden Ratio Spiral" class="w-full h-auto mb-4">
-                        <p class="text-lg md:text-xl font-bold text-center" style="font-family: var(--font-body);">
-                            A Little Better Every Day
-                        </p>
+            <div class="relative h-screen flex items-center justify-center text-center overflow-hidden p-8 second-banner" 
+                 style="background-image: url('./images/2.jpg');">
+                <div class="relative z-10 p-8 rounded-lg"> 
+                    <h2 class="font-extrabold second-banner-text" style="font-family: var(--font-heading);">
+                        Lead with Purpose.<br>
+                        Live Your Culture.<br>
+                        Deliver <span class="italic">Results</span>.
+                    </h2>
+                    <div class="second-banner-button-wrapper">
+                        <a href="business-grow.html" class="learn-more-button">
+                            Learn More
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8" 
-                 style="background-image: url('https://images.pexels.com/photos/18251820/pexels-photo-18251820/free-photo-of-geometric-shapes-art.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8"> <div class="relative z-10 p-8 rounded-lg"> <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Lead with Purpose. Live Your Culture. Deliver Results.</h2>
-                        <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
+            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8 third-banner"
+                 style="background-image: url('./images/3.jpg');">
+                <div class="relative z-10 p-8 rounded-lg"> 
+                    <h2 class="font-extrabold third-banner-text" style="font-family: var(--font-heading);">
+                        Own your <span class="italic">story</span>.<br> Lead yourself.<br> Grow on purpose.
+                    </h2>
+                    <div class="third-banner-button-wrapper">
+                        <a href="personal-grow.html" class="start-now-button">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative h-screen flex items-center justify-center text-center overflow-hidden p-8 fourth-banner"
+                 style="background-image: url('./images/4.jpg');">
+                <div class="relative z-10 p-8 rounded-lg">
+                    <h2 class="font-extrabold fourth-banner-text" style="font-family: var(--font-heading);">
+                        People First.<br>
+                        Culture Forward.<br>
+                        <span class="italic">Accelerate</span> Growth.
+                    </h2>
+                    <div class="fourth-banner-button-wrapper">
+                        <a href="about.html" class="learn-more-button">
+                            Learn More
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://images.pexels.com/photos/19665476/pexels-photo-19665476/free-photo-of-abstract-art-with-pink-and-orange-colors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8"> <div class="relative z-10 p-8 rounded-lg">
-                        <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Own your story. Lead yourself. Grow on purpose.</h2>
-                        <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Start Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://images.pexels.com/photos/1486972/pexels-photo-1486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8"> <div class="relative z-10 p-8 rounded-lg">
-                        <h2 class="text-5xl md:text-6xl font-extrabold mb-4">People First. Culture Forward. Accelerate Growth.</h2>
-                        <a href="about.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://images.pexels.com/photos/17616147/pexels-photo-17616147/free-photo-of-colorful-abstract-painting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
+                 style="background-image: url('https://images.pexels.com/photos/17616147/pexels-photo-17616147/free-photo-of-abstract-art-with-pink-and-orange-colors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8"> <div class="relative z-10 p-8 rounded-lg">
                         <h2 class="text-5xl md:text-6xl font-extrabold mb-8">Contact</h2>
                         <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                            <button id="btn-contact-business" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About Businesses</button>
-                            <button id="btn-contact-individuals" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About You</button>
+                            <button id="btn-contact-business" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">Let’s Talk About Businesses</button>
+                            <button id="btn-contact-individuals" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">Let’s Talk About You</button>
                         </div>
                     </div>
                 </div>
@@ -129,16 +524,16 @@
             <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
             <form class="space-y-6">
                 <div>
-                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" placeholder="Company" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" placeholder="Your Email Address" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" placeholder="Phone (Optional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="relative">
                     <div id="business-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -216,7 +611,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Send Message</button>
             </form>
         </div>
 
@@ -224,16 +619,16 @@
             <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
             <form class="space-y-6">
                 <div>
-                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" placeholder="Company (Optional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" placeholder="Your Email Address" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" placeholder="Phone (Optional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="relative">
                     <div id="individual-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -307,19 +702,19 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
+                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Send Message</button>
             </form>
         </div>
     </div>
 </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-10">
+    <footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
-                <img src="./images/thumbnail.svg" alt="Logo BUSINESS NAME Variant" class="h-40 mx-auto">
+                <img src="./images/thumbnail.svg" alt="Business through people Variant Logo" class="h-40 mx-auto">
             </div>
-            <p class="text-lg mb-4">&copy; 2025 BUSINESS NAME. Toate drepturile rezervate.</p>
+            <p class="text-lg mb-4">&copy; 2025 Business through people. All rights reserved.</p>
             <div class="flex justify-center space-x-6 text-2xl">
                 <a href="#" class="hover:text-gray-400 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -328,7 +723,7 @@
                 </a>
                 <a href="#" class="hover:text-gray-400 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.851.07c1.173.056 1.834.254 2.394.475.6.236 1.05.518 1.503.971.453.453.735.903.971 1.503.221.56.419 1.221.475 2.394.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.851c-.056 1.173-.254 1.834-.475 2.394-.236.6-.518 1.05-.971 1.503-.453.453-.903.735-1.503.971-.56.221-.419 1.221-.475 2.394-.058 1.267-.07 1.647-.07 4.85s.012-3.584.07-4.851c.056-1.173.254-1.834.475-2.394.236-.6.518-1.05.971-1.503.453-.453.903-.735 1.503-.971.56-.221 1.221-.419 2.394-.475C8.416 2.175 8.796 2.163 12 2.163zm0 1.956c-3.267 0-3.693.014-4.992.071-1.07.051-1.666.234-2.091.407-.442.18-.752.417-1.038.704-.287.287-.524.596-.704 1.038-.173.425-.356 1.021-.407 2.091-.057 1.3-.071 1.725-.071 4.992s.014 3.693.071 4.992c.051 1.07.234 1.666.407 2.091.18.442.417.752.704 1.038.287.287.596.524 1.038.704.425.173 1.021.356 2.091.407 1.3.057 1.725.071 4.992.071s3.693-.014 4.992-.071c1.07-.051 1.666-.234 2.091-.407.442-.18.752-.417 1.038-.704.287-.287.524-.596.704-1.038.173-.425-.356-1.021-.407-2.091-.057-1.3-.071-1.725-.071-4.992s-.014-3.693-.071-4.992c-.051-1.07-.234-1.666-.407-2.091-.18-.442-.417-.752-.704-1.038-.287-.287-.596-.524-1.038-.704-.425-.173-1.021-.356-.407-2.091-.057-1.3-.071-1.725-.071-4.992s.014-3.693.071-4.992z"/><circle cx="17.653" cy="6.347" r="1.25"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.851.07c1.173.056 1.834.254 2.394.475.6.236 1.05.518 1.503.971.453.453.735.903.971 1.503.221.56.419 1.221.475 2.394.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.851c-.056 1.173-.254 1.834-.475 2.394-.236.6-.518 1.05-.971 1.503-.453.453-.903.735-1.503.971-.56.221-.419 1.221-.475 2.394-.058 1.267-.07 1.647-.07 4.85s.014 3.693.071 4.992c.051 1.07.234 1.666.407 2.091.18.442.417.752.704 1.038.287.287.524.596.704 1.038.173.425-.356-1.021-.407-2.091-.057-1.3-.071-1.725-.071-4.992s-.014-3.693-.071-4.992c-.051-1.07-.234-1.666-.407-2.091-.18-.442-.417-.752-.704-1.038-.287-.287-.596-.524-1.038-.704-.425-.173-1.021-.356-.407-2.091-.057-1.3-.071-1.725-.071-4.992s.014-3.693.071-4.992z"/><circle cx="17.653" cy="6.347" r="1.25"/>
                     </svg>
                 </a>
                 <a href="#" class="hover:text-gray-400 transition duration-300">
