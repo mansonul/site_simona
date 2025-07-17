@@ -19,8 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Funcționalitate pentru butoanele de contact (Business/Individual)
-    const btnContactBusiness = document.getElementById('btn-contact-business');
-    const btnContactIndividuals = document.getElementById('btn-contact-individuals');
+    const btnContactBusiness = document.getElementById('btn-contact-business'); // Buton generic de Business
+    const btnContactIndividuals = document.getElementById('btn-contact-individuals'); // Buton generic pentru Individuali
+    const btnContactBusinessHero = document.getElementById('btn-contact-business-hero'); // Buton specific paginii business-grow.html (secțiunea Hero)
+    const btnContactBusinessPage = document.getElementById('btn-contact-business-page'); // Buton specific paginii business-grow.html (secțiunea de jos)
+
     const contactFormsContainer = document.getElementById('contact-forms-container');
     const closeContactForms = document.getElementById('close-contact-forms');
     const formBusiness = document.getElementById('form-business');
@@ -39,6 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
             contactFormsContainer.classList.remove('hidden');
             formIndividuals.classList.remove('hidden');
             formBusiness.classList.add('hidden'); // Asigură-te că celălalt formular este ascuns
+        });
+    }
+
+    // Adaugă listeneri pentru butoanele specifice de pe business-grow.html
+    if (btnContactBusinessHero) {
+        btnContactBusinessHero.addEventListener('click', () => {
+            contactFormsContainer.classList.remove('hidden');
+            formBusiness.classList.remove('hidden');
+            formIndividuals.classList.add('hidden');
+        });
+    }
+
+    if (btnContactBusinessPage) {
+        btnContactBusinessPage.addEventListener('click', () => {
+            contactFormsContainer.classList.remove('hidden');
+            formBusiness.classList.remove('hidden');
+            formIndividuals.classList.add('hidden');
         });
     }
 

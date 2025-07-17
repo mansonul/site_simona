@@ -1,288 +1,287 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Grow - [Numele Companiei Tale]</title>
+    <title>Business Grow - Business through people</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css"> 
-    <style>
-        /* Define your custom CSS variables for fonts here, if not already in style.css */
-        :root {
-            --font-heading: 'Libre Baskerville', serif;
-            --font-body: 'Work Sans', sans-serif;
-            --color-gold-custom: #FFD700; /* Example for 'gold-custom' border */
-        }
-        .text-gold-custom { color: var(--color-gold-custom); }
-        .border-gold-custom { border-color: var(--color-gold-custom); }
-
-        /* Stiluri de bază pentru flip card */
-        .flip-card {
-            background-color: transparent;
-            width: 100%; /* Ocupă întreaga lățime a coloanei din grid */
-            height: 250px; /* Înălțime fixă pentru carduri pe desktop */
-            perspective: 1000px; /* Necesar pentru efectul 3D */
-            border-bottom: 4px solid #3B82F6; /* blue-600 */
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
-            position: relative; /* Pentru a permite poziționarea absolută a inner-ului */
-            display: flex; /* Flexbox pentru a centra conținutul */
-            align-items: stretch; /* Face copiii să ocupe toată înălțimea */
-            justify-content: center;
-        }
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        /* Fețele cardului */
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden; /* Ascunde spatele elementului la rotație */
-            backface-visibility: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem; /* p-8 */
-            background-color: white; /* bg-white */
-            border-radius: 0.5rem; /* rounded-lg */
-        }
-
-        .flip-card-back {
-            transform: rotateY(180deg);
-            color: #4B5563; /* text-gray-700 */
-        }
-
-        /* Stiluri specifice pentru Desktop (de la md în sus) */
-        @media (min-width: 768px) {
-            .flip-card:hover .flip-card-inner {
-                transform: rotateY(180deg);
-            }
-        }
-
-        /* Stiluri specifice pentru Mobil (sub md) */
-        @media (max-width: 767px) {
-            .flip-card {
-                height: auto; /* Permite înălțimii să se adapteze la conținut */
-                flex-direction: column; /* Asigură că fețele se așează una sub alta */
-                padding: 0; /* Eliminăm padding-ul de pe containerul exterior */
-                box-shadow: none; /* Eliminăm umbra pentru un aspect mai curat pe mobil dacă stivuim */
-                border-bottom: none; /* Eliminăm bordura de jos de pe containerul exterior */
-            }
-
-            .flip-card-inner {
-                transform: none !important; /* Dezactivează efectul de flip */
-                position: static; /* Nu mai este poziționat absolut */
-                height: auto; /* Permite înălțimii să se adapteze la conținut */
-                display: flex;
-                flex-direction: column;
-                gap: 1rem; /* Spațiu între față și spate */
-            }
-
-            .flip-card-front, .flip-card-back {
-                position: static; /* Fețele nu mai sunt poziționate absolut */
-                transform: none !important; /* Dezactivează orice transformare */
-                backface-visibility: visible; /* Fețele sunt mereu vizibile */
-                height: auto; /* Înălțime auto pentru conținut */
-                padding: 1.5rem; /* Ajustăm padding-ul pentru mobil */
-                border-radius: 0.5rem; /* Păstrăm colțurile rotunjite */
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Umbră pe fiecare "secțiune" */
-            }
-
-            .flip-card-front {
-                border-bottom: 2px solid #3B82F6; /* Bordură sub fața frontală pe mobil */
-                margin-bottom: 0.5rem; /* Spațiu între front și back */
-            }
-             .flip-card-back {
-                border-top: 2px solid #3B82F6; /* Bordură deasupra feței din spate pe mobil */
-                margin-top: 0.5rem; /* Spațiu între front și back */
-            }
-        }
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body class="font-sans antialiased text-gray-800">
 
-    <div class="w-full bg-black h-4"></div> 
+    <div class="w-full bg-black h-4"></div>
 
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex flex-col items-center">
             <a href="index.html" class="mb-4 md:mb-0">
-                <img src="./images/logo.png" alt="Logo BUSINESS NAME" class="h-20 w-auto max-w-full">
+                <img src="./images/logo.png" alt="Logo Business through people" class="h-20 w-auto max-w-full">
             </a>
-            
+
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
-                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium">HOME</a></li>
-                    <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium">ABOUT</a></li>
-                    <li><a href="business-grow.html" class="text-gray-900 font-bold">BUSINESS GROW</a></li> <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium">PERSONAL GROW</a></li>
-                    <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium">INSIGHTS</a></li>
-                    <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a></li>
+                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">HOME</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">ABOUT</a></li>
+                    <li><a href="business-grow.html" class="text-gray-900 font-bold"
+                            style="font-family: var(--font-body);">BUSINESS GROW</a></li>
+                    <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">PERSONAL GROW</a></li>
+                    <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">INSIGHTS</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">CONTACT</a></li>
                 </ul>
             </nav>
 
             <button id="mobile-menu-button" class="md:hidden absolute top-4 right-4 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 pb-4">
             <ul class="flex flex-col items-center space-y-4">
-                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">HOME</a></li>
-                <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">ABOUT</a></li>
-                <li><a href="business-grow.html" class="text-gray-900 font-bold py-2 block">BUSINESS GROW</a></li> <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">PERSONAL GROW</a></li>
-                <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">INSIGHTS</a></li>
-                <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">CONTACT</a></li>
+                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">HOME</a></li>
+                <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">ABOUT</a></li>
+                <li><a href="business-grow.html" class="text-gray-900 font-bold py-2 block"
+                        style="font-family: var(--font-body);">BUSINESS GROW</a></li>
+                <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">PERSONAL GROW</a></li>
+                <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">INSIGHTS</a></li>
+                <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">CONTACT</a></li>
             </ul>
         </div>
     </header>
 
     <main class="pt-0 md:pt-0">
-        <section class="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div class="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between">
-                <div class="flex flex-col text-left md:pr-8 md:w-4/6 mb-8 md:mb-0">
-                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight" style="font-family: var(--font-heading);">When your people perform at their best, your business accelerates.</h1>
-                    <p class="text-xl md:text-2xl mb-8 opacity-90" style="font-family: var(--font-body);">Strategy turns into execution. Culture drives performance. Leaders inspire action. You don’t need more effort; you need the right flow.</p>
-                    <p class="text-2xl md:text-3xl font-semibold mb-10" style="font-family: var(--font-body);">We collaborate with you to build it.</p>
-                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-8">
-                        <a href="#what-happens" class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
-                            <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <section class="relative hero-banner-main text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="relative z-10 container mx-auto flex flex-col items-center justify-center">
+                <div class="flex flex-col text-center max-w-5xl mx-auto mb-8 md:mb-0">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight"
+                        style="font-family: var(--font-heading);">When your people perform at their best, your business
+                        <em class="text-highlight">accelerates</em>.</h2>
+                    <p class="mb-8 opacity-90 responsive-text-size" style="font-family: var(--font-body);">Strategy
+                        turns into execution. Culture drives performance. Leaders inspire action. You don’t need more
+                        effort; you need the right flow.</p>
+                    <p class="text-xl md:text-2xl font-semibold mb-10" style="font-family: var(--font-body);">We
+                        collaborate with you to build it.</p>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-8 justify-center">
+                        <a href="#what-happens"
+                            class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
                             Explore More
                         </a>
-                        <button id="btn-contact-business-hero" class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
-                            <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <button id="btn-contact-business-hero"
+                            class="inline-flex items-center text-white px-6 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white hover:text-gray-900 transition duration-300 banner-button">
                             Let's Talk Business
                         </button>
                     </div>
-                </div>
-
-                <div class="hidden md:flex flex-col w-full md:w-2/6 items-center justify-end md:pl-8 pb-4">
-                    <img src="./images/spiral.webp" alt="Golden Ratio Spiral" class="w-full h-auto mb-4">
-                    <p class="text-lg md:text-xl font-bold text-center" style="font-family: var(--font-body);">
-                        A Little Better Every Day
-                    </p>
                 </div>
             </div>
         </section>
 
         <section id="what-happens" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
             <div class="container mx-auto max-w-5xl">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900" style="font-family: var(--font-heading);">What Happens When Your People Perform at Their Best?</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12" style="font-family: var(--font-heading);">
+                    What Happens When Your People Perform at Their Best?</h2>
 
                 <div class="space-y-8 text-lg text-gray-700 leading-relaxed" style="font-family: var(--font-body);">
-                    <p>Your strategy becomes reality. Your teams collaborate with clarity. Your leaders inspire progress and not just manage it.</p>
-                    <p class="font-semibold text-xl">But when roles blur, resistance builds, or culture drifts, even the best strategies stall. That’s where transformation begins.</p>
-                    <p>You need your managers to lead with confidence and direction. You want teams who know how to engage, decide, and deliver. You’re looking for culture, leadership, and systems that truly align.</p>
+                    <p>Your strategy becomes reality. Your teams collaborate with clarity. Your leaders inspire progress
+                        and not just manage it.</p>
+                    <p class="font-semibold text-xl">But when roles blur, resistance builds, or culture drifts, even the
+                        best strategies stall. That’s where transformation begins.</p>
+                    <p>You need your managers to lead with confidence and direction. You want teams who know how to
+                        engage, decide, and deliver. You’re looking for culture, leadership, and systems that truly
+                        align.</p>
                     <p class="font-bold text-xl text-blue-700">You don’t need more theory, you need traction.</p>
-                    <p>Let’s get your people moving in the same direction with clarity, ownership, and measurable results. Because when people grow, everything does.</p>
+                    <p>Let’s get your people moving in the same direction with clarity, ownership, and measurable
+                        results. Because when people grow, everything does.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="text-blue-600 mb-4 text-5xl">
-                                    💡
+                    <!-- Card 1: Strategy Execution -->
+                    <div>
+                        <!-- Desktop Flip Card Content -->
+                        <div class="flip-card hidden md:block">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h3 class="text-xl font-semibold mb-2"
+                                        style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                        Strategy Execution</h3>
                                 </div>
-                                <h3 class="text-xl font-semibold mb-2 text-gray-900" style="font-family: var(--font-heading);">Strategy Execution</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p class="text-gray-600" style="font-family: var(--font-body);">Transformă viziunea în acțiune.</p>
+                                <div class="flip-card-back">
+                                    <p class="text-gray-600" style="font-family: var(--font-body);">Transformă viziunea
+                                        în acțiune.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="text-blue-600 mb-4 text-5xl">
-                                    🤝
-                                </div>
-                                <h3 class="text-xl font-semibold mb-2 text-gray-900" style="font-family: var(--font-heading);">Collaborative Teams</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p class="text-gray-600" style="font-family: var(--font-body);">Echipe care inovează și livrează cu claritate.</p>
-                            </div>
+                        <!-- Mobile-specific content -->
+                        <div
+                            class="mobile-card-content md:hidden p-4 rounded-lg bg-gray-50 border-b-4 border-[#836957] shadow-md">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                Strategy Execution</h3>
+                            <p class="text-gray-600" style="font-family: var(--font-body);">Transformă viziunea în
+                                acțiune.</p>
                         </div>
                     </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="text-blue-600 mb-4 text-5xl">
-                                    🌟
+
+                    <!-- Card 2: Collaborative Teams -->
+                    <div>
+                        <!-- Desktop Flip Card Content -->
+                        <div class="flip-card hidden md:block">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h3 class="text-xl font-semibold mb-2"
+                                        style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                        Collaborative Teams</h3>
                                 </div>
-                                <h3 class="text-xl font-semibold mb-2 text-gray-900" style="font-family: var(--font-heading);">Inspiring Leaders</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p class="text-gray-600" style="font-family: var(--font-body);">Lideri care ghidează și motivează.</p>
+                                <div class="flip-card-back">
+                                    <p class="text-gray-600" style="font-family: var(--font-body);">Echipe care inovează
+                                        și livrează cu claritate.</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- Mobile-specific content -->
+                        <div
+                            class="mobile-card-content md:hidden p-4 rounded-lg bg-gray-50 border-b-4 border-[#836957] shadow-md">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                Collaborative Teams</h3>
+                            <p class="text-gray-600" style="font-family: var(--font-body);">Echipe care inovează și
+                                livrează cu claritate.</p>
+                        </div>
                     </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="text-blue-600 mb-4 text-5xl">
-                                    🌱
+
+                    <!-- Card 3: Inspiring Leaders -->
+                    <div>
+                        <!-- Desktop Flip Card Content -->
+                        <div class="flip-card hidden md:block">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h3 class="text-xl font-semibold mb-2"
+                                        style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                        Inspiring Leaders</h3>
                                 </div>
-                                <h3 class="text-xl font-semibold mb-2 text-gray-900" style="font-family: var(--font-heading);">Aligned Culture</h3>
+                                <div class="flip-card-back">
+                                    <p class="text-gray-600" style="font-family: var(--font-body);">Lideri care ghidează
+                                        și motivează.</p>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <p class="text-gray-600" style="font-family: var(--font-body);">Cultura care susține și accelerează performanța.</p>
+                        </div>
+                        <!-- Mobile-specific content -->
+                        <div
+                            class="mobile-card-content md:hidden p-4 rounded-lg bg-gray-50 border-b-4 border-[#836957] shadow-md">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                Inspiring Leaders</h3>
+                            <p class="text-gray-600" style="font-family: var(--font-body);">Lideri care ghidează și
+                                motivează.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Aligned Culture -->
+                    <div>
+                        <!-- Desktop Flip Card Content -->
+                        <div class="flip-card hidden md:block">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h3 class="text-xl font-semibold mb-2"
+                                        style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                        Aligned Culture</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="text-gray-600" style="font-family: var(--font-body);">Cultura care susține
+                                        și accelerează performanța.</p>
+                                </div>
                             </div>
+                        </div>
+                        <!-- Mobile-specific content -->
+                        <div
+                            class="mobile-card-content md:hidden p-4 rounded-lg bg-gray-50 border-b-4 border-[#836957] shadow-md">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-background-desktop);">
+                                Aligned Culture</h3>
+                            <p class="text-gray-600" style="font-family: var(--font-body);">Cultura care susține și
+                                accelerează performanța.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8" style="font-family: var(--font-heading);">Ready to Elevate Your Business?</h2>
-            <p class="text-xl md:text-2xl mb-10 opacity-90" style="font-family: var(--font-body);">Explore our comprehensive programs designed for impactful growth.</p>
-            <a href="#business-programs-list" class="inline-block bg-white text-gray-900 hover:bg-gray-200 text-lg md:text-xl font-semibold px-10 py-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Explore Business Programs</a>
+        <section class="py-16 px-4 sm:px-6 lg:px-8 text-white text-center"
+            style="background-color: var(--color-background-desktop);">
+            <div class="container mx-auto max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8" style="font-family: var(--font-heading);">Ready to
+                    Elevate Your Business?</h2>
+                <p class="text-xl md:text-2xl mb-10 opacity-90" style="font-family: var(--font-body);">Explore our
+                    comprehensive programs designed for impactful growth.</p>
+                <a href="#business-programs-list"
+                    class="inline-block text-white border border-white hover:bg-white hover:text-gray-900 text-lg font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 banner-button">Explore
+                    Business Programs</a>
+            </div>
         </section>
 
         <section id="business-programs-list" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="container mx-auto max-w-5xl">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900" style="font-family: var(--font-heading);">Our Tailored Business Programs</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" style="font-family: var(--font-heading);">
+                    Our Tailored Business Programs</h2>
 
                 <div class="mb-16">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center" style="font-family: var(--font-heading);">Systemic Leadership Programs</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-center"
+                        style="font-family: var(--font-heading);">Systemic Leadership Programs</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Leading with Systemic Awareness</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900 flex flex-col justify-between"
+                            style="background-image: url('./images/1.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.5);">
+                            <h4 class="text-2xl font-semibold mb-4 text-white"
+                                style="font-family: var(--font-heading);">Leading with Systemic Awareness</h4>
+                            <ul class="list-disc list-inside space-y-3 text-white text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Cultivate healthy team cultures by applying a whole-system perspective.</li>
                                 <li>Recognize hidden patterns, roles, and team dynamics that influence behavior.</li>
                             </ul>
                         </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">People Management through a Systemic Lens</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900 flex flex-col justify-between"
+                            style="background-image: url('./images/2.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.5);">
+                            <h4 class="text-2xl font-semibold mb-4 text-white"
+                                style="font-family: var(--font-heading);">People Management through a Systemic Lens</h4>
+                            <ul class="list-disc list-inside space-y-3 text-white text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Explore leadership as a relational function, not just a position.</li>
                                 <li>Strengthen clarity of roles, feedback, and boundaries to boost engagement.</li>
                             </ul>
                         </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Managing Change</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900 flex flex-col justify-between"
+                            style="background-image: url('./images/3.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.5);">
+                            <h4 class="text-2xl font-semibold mb-4 text-white"
+                                style="font-family: var(--font-heading);">Managing Change</h4>
+                            <ul class="list-disc list-inside space-y-3 text-white text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Identify resistance as useful systemic feedback.</li>
                                 <li>Build trust, stability, and alignment in dynamic contexts.</li>
                             </ul>
                         </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Mastering Human Behaviour in an AI Era</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900 flex flex-col justify-between"
+                            style="background-image: url('./images/4.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.5);">
+                            <h4 class="text-2xl font-semibold mb-4 text-white"
+                                style="font-family: var(--font-heading);">Mastering Human Behaviour in an AI Era</h4>
+                            <ul class="list-disc list-inside space-y-3 text-white text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Anticipate behavioural shifts as AI reshapes roles and workflows.</li>
                                 <li>Strengthen empathy, adaptability, and ethical decision-making.</li>
                             </ul>
@@ -291,25 +290,32 @@
                 </div>
 
                 <div class="mt-16">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center" style="font-family: var(--font-heading);">Other Successfully Delivered Programs</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-center"
+                        style="font-family: var(--font-heading);">Other Successfully Delivered Programs</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Negotiation Skills</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                            <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                                style="font-family: var(--font-heading);">Negotiation Skills</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Learn to uncover true interests, handle objections, and build mutual value.</li>
                                 <li>Navigate difficult conversations with confidence, empathy, and clarity.</li>
                             </ul>
                         </div>
                         <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Consultative Sales</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                            <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                                style="font-family: var(--font-heading);">Consultative Sales</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Understand buying motivations and tailor your message to create relevance.</li>
                                 <li>Build trust, manage objections, and close with confidence and integrity.</li>
                             </ul>
                         </div>
                         <div class="bg-gray-50 p-8 rounded-lg shadow-md border-t-4 border-gray-900">
-                            <h4 class="text-2xl font-semibold mb-4 text-gray-900" style="font-family: var(--font-heading);">Customer Experiences</h4>
-                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg" style="font-family: var(--font-body);">
+                            <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                                style="font-family: var(--font-heading);">Customer Experiences</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg"
+                                style="font-family: var(--font-body);">
                                 <li>Understand the full customer journey and key emotional touchpoints.</li>
                                 <li>Align mindset, behavior, and communication to consistently exceed expectations.</li>
                             </ul>
@@ -321,287 +327,428 @@
 
         <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100 text-center">
             <div class="container mx-auto max-w-3xl">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900" style="font-family: var(--font-heading);">Need a Tailored Approach?</h2>
-                <p class="text-xl md:text-2xl mb-10 text-gray-700" style="font-family: var(--font-body);">We also offer customized programs tailored to the specific needs of each organization, to effectively support team and leadership development goals.</p>
-                <button id="btn-contact-business-page" class="bg-gray-900 text-white hover:bg-gray-700 text-lg md:text-xl font-semibold px-10 py-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Let's Discuss Your Business Needs</button>
+                <h2 id="tailored-approach-heading" class="text-4xl md:text-5xl font-bold mb-8"
+                    style="font-family: var(--font-heading);">Need a Tailored Approach?</h2>
+                <p class="text-xl md:text-2xl mb-10 text-gray-700" style="font-family: var(--font-body);">We also offer
+                    customized programs tailored to the specific needs of each organization, to effectively support team
+                    and leadership development goals.</p>
+                <button id="btn-contact-business-page"
+                    class="bg-gray-900 text-white hover:bg-gray-700 text-lg md:text-xl font-semibold px-10 py-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Let's
+                    Discuss Your Business Needs</button>
             </div>
         </section>
 
     </main>
 
-    <section id="contact-forms-container" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-    <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
-        <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+    <section id="contact-forms-container"
+        class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
+            <button id="close-contact-forms"
+                class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
 
-        <div id="form-business" class="hidden">
-            <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk (Business)</h2>
-            <form class="space-y-6">
-                <div>
-                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div class="relative">
-                    <div id="business-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                        <span id="selected-business-challenges" class="text-gray-700">What’s your current challenge?</span>
-                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            <div id="form-business" class="hidden">
+                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
+                    (Business)</h2>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
                     </div>
-                    <div id="business-challenge-options" class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-culture-misalignment" value="Culture misalignment" class="mr-2">
-                            <label for="bc-culture-misalignment" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Culture misalignment</label>
+                    <div>
+                        <input type="text" placeholder="Company"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email Address"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone (Optional)"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div class="relative">
+                        <div id="business-challenge-dropdown-toggle"
+                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                            <span id="selected-business-challenges" class="text-gray-700">What’s your current
+                                challenge?</span>
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-low-engagement" value="Low engagement" class="mr-2">
-                            <label for="bc-low-engagement" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Low engagement</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-leadership-gaps" value="Leadership gaps" class="mr-2">
-                            <label for="bc-leadership-gaps" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Leadership gaps</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-team-conflict" value="Team conflict" class="mr-2">
-                            <label for="bc-team-conflict" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Team conflict</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-change-fatigue" value="Change fatigue" class="mr-2">
-                            <label for="bc-change-fatigue" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Change fatigue</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-poor-collaboration" value="Poor collaboration" class="mr-2">
-                            <label for="bc-poor-collaboration" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Poor collaboration</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-unclear-roles" value="Unclear roles" class="mr-2">
-                            <label for="bc-unclear-roles" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Unclear roles</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-communication-issues" value="Communication issues" class="mr-2">
-                            <label for="bc-communication-issues" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Communication issues</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-resistance-to-change" value="Resistance to change" class="mr-2">
-                            <label for="bc-resistance-to-change" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Resistance to change</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-capability-gaps" value="Capability gaps" class="mr-2">
-                            <label for="bc-capability-gaps" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Capability gaps</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-underperformance" value="Underperformance" class="mr-2">
-                            <label for="bc-underperformance" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Underperformance</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-new-management" value="New management" class="mr-2">
-                            <label for="bc-new-management" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">New management</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-scaling-challenges" value="Scaling challenges" class="mr-2">
-                            <label for="bc-scaling-challenges" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Scaling challenges</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-strategy-execution" value="Strategy execution" class="mr-2">
-                            <label for="bc-strategy-execution" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Strategy execution</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-low-trust" value="Low trust" class="mr-2">
-                            <label for="bc-low-trust" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Low trust</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-high-turnover" value="High turnover" class="mr-2">
-                            <label for="bc-high-turnover" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">High turnover</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="bc-not-sure-yet" value="Not sure yet" class="mr-2">
-                            <label for="bc-not-sure-yet" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Not sure yet</label>
+                        <div id="business-challenge-options"
+                            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-culture-misalignment" value="Culture misalignment"
+                                    class="mr-2">
+                                <label for="bc-culture-misalignment" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Culture misalignment</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-low-engagement" value="Low engagement" class="mr-2">
+                                <label for="bc-low-engagement" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Low engagement</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-leadership-gaps" value="Leadership gaps" class="mr-2">
+                                <label for="bc-leadership-gaps" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Leadership gaps</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-team-conflict" value="Team conflict" class="mr-2">
+                                <label for="bc-team-conflict" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Team conflict</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-innovation" value="Lack of innovation"
+                                    class="mr-2">
+                                <label for="bc-lack-of-innovation" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of innovation</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-poor-communication" value="Poor communication"
+                                    class="mr-2">
+                                <label for="bc-poor-communication" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Poor communication</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-high-turnover" value="High turnover" class="mr-2">
+                                <label for="bc-high-turnover" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">High turnover</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-resistance-to-change" value="Resistance to change"
+                                    class="mr-2">
+                                <label for="bc-resistance-to-change" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Resistance to change</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-unclear-strategy" value="Unclear strategy" class="mr-2">
+                                <label for="bc-unclear-strategy" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Unclear strategy</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-performance-issues" value="Performance issues"
+                                    class="mr-2">
+                                <label for="bc-performance-issues" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Performance issues</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-accountability" value="Lack of accountability"
+                                    class="mr-2">
+                                <label for="bc-lack-of-accountability" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of accountability</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-poor-decision-making" value="Poor decision-making"
+                                    class="mr-2">
+                                <label for="bc-poor-decision-making" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Poor decision-making</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-ineffective-meetings" value="Ineffective meetings"
+                                    class="mr-2">
+                                <label for="bc-ineffective-meetings" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Ineffective meetings</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-unaligned-goals" value="Unaligned goals" class="mr-2">
+                                <label for="bc-unaligned-goals" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Unaligned goals</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-clear-roles" value="Lack of clear roles"
+                                    class="mr-2">
+                                <label for="bc-lack-of-clear-roles" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of clear roles</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-insufficient-feedback" value="Insufficient feedback"
+                                    class="mr-2">
+                                <label for="bc-insufficient-feedback" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Insufficient feedback</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-talent-retention" value="Talent retention" class="mr-2">
+                                <label for="bc-talent-retention" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Talent retention</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-training-development" value="Training & Development"
+                                    class="mr-2">
+                                <label for="bc-training-development" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Training & Development</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-post-merger-integration" value="Post-merger integration"
+                                    class="mr-2">
+                                <label for="bc-post-merger-integration" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Post-merger integration</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-succession-planning" value="Succession planning"
+                                    class="mr-2">
+                                <label for="bc-succession-planning" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Succession planning</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-work-life-balance" value="Work-life balance" class="mr-2">
+                                <label for="bc-work-life-balance" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Work-life balance</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-burnout" value="Burnout" class="mr-2">
+                                <label for="bc-burnout" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Burnout</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300" style="font-family: var(--font-body);">Trimite Mesajul</button>
-            </form>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                        style="font-family: var(--font-body);">Submit</button>
+                </form>
+            </div>
+
+            <div id="form-individuals" class="hidden">
+                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
+                    (Individuals)</h2>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email Address"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone (Optional)"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div class="relative">
+                        <div id="individual-challenge-dropdown-toggle"
+                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                            <span id="selected-individual-challenges" class="text-gray-700">What’s your current
+                                challenge?</span>
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div id="individual-challenge-options"
+                            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-career-transition" value="Career transition" class="mr-2">
+                                <label for="ic-career-transition" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Career transition</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-leadership-development" value="Leadership development"
+                                    class="mr-2">
+                                <label for="ic-leadership-development" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Leadership development</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-communication-skills" value="Communication skills"
+                                    class="mr-2">
+                                <label for="ic-communication-skills" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Communication skills</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-conflict-resolution" value="Conflict resolution"
+                                    class="mr-2">
+                                <label for="ic-conflict-resolution" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Conflict resolution</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-stress-management" value="Stress management" class="mr-2">
+                                <label for="ic-stress-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Stress management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-personal-branding" value="Personal branding" class="mr-2">
+                                <label for="ic-personal-branding" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Personal branding</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-public-speaking" value="Public speaking" class="mr-2">
+                                <label for="ic-public-speaking" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Public speaking</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-time-management" value="Time management" class="mr-2">
+                                <label for="ic-time-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Time management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-goal-setting" value="Goal setting" class="mr-2">
+                                <label for="ic-goal-setting" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Goal setting</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-decision-making" value="Decision-making" class="mr-2">
+                                <label for="ic-decision-making" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Decision-making</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-confidence-building" value="Confidence building"
+                                    class="mr-2">
+                                <label for="ic-confidence-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Confidence building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-work-life-balance" value="Work-life balance" class="mr-2">
+                                <label for="ic-work-life-balance" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Work-life balance</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-burnout-prevention" value="Burnout prevention"
+                                    class="mr-2">
+                                <label for="ic-burnout-prevention" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Burnout prevention</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-resilience-building" value="Resilience building"
+                                    class="mr-2">
+                                <label for="ic-resilience-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Resilience building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-adaptability" value="Adaptability" class="mr-2">
+                                <label for="ic-adaptability" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Adaptability</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-emotional-intelligence" value="Emotional Intelligence"
+                                    class="mr-2">
+                                <label for="ic-emotional-intelligence" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Emotional Intelligence</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                        style="font-family: var(--font-body);">Submit</button>
+                </form>
+            </div>
         </div>
-
-        <div id="form-individuals" class="hidden">
-            <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk (Individual)</h2>
-            <form class="space-y-6">
-                <div>
-                    <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div>
-                    <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                </div>
-                <div class="relative">
-                    <div id="individual-challenge-dropdown-toggle" class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900" style="font-family: var(--font-body);">
-                        <span id="selected-individual-challenges" class="text-gray-700">What’s your current challenge?</span>
-                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div id="individual-challenge-options" class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-overgiving" value="Overgiving" class="mr-2">
-                            <label for="ic-overgiving" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Overgiving</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-avoidant-patterns" value="Avoidant patterns" class="mr-2">
-                            <label for="ic-avoidant-patterns" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Avoidant patterns</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-poor-communication" value="Poor communication" class="mr-2">
-                            <label for="ic-poor-communication" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Poor communication</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-feeling-disconnected" value="Feeling disconnected" class="mr-2">
-                            <label for="ic-feeling-disconnected" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Feeling disconnected</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-conflict-in-relationships" value="Conflict in relationships" class="mr-2">
-                            <label for="ic-conflict-in-relationships" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Conflict in relationships</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-people-pleasing" value="People-pleasing" class="mr-2">
-                            <label for="ic-people-pleasing" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">People-pleasing</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-midlife-shift" value="Midlife shift" class="mr-2">
-                            <label for="ic-midlife-shift" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Midlife shift</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-starting-over" value="Starting over" class="mr-2">
-                            <label for="ic-starting-over" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Starting over</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-career-change" value="Career change" class="mr-2">
-                            <label for="ic-career-change" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Career change</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-pursuing-meaning" value="Pursuing meaning" class="mr-2">
-                            <label for="ic-pursuing-meaning" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Pursuing meaning</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-living-on-autopilot" value="Living on autopilot" class="mr-2">
-                            <label for="ic-living-on-autopilot" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Living on autopilot</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-no-time-for-others" value="No time for others" class="mr-2">
-                            <label for="ic-no-time-for-others" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">No time for others</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-no-time-for-self" value="No time for self" class="mr-2">
-                            <label for="ic-no-time-for-self" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">No time for self</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-boundaries" value="Boundaries" class="mr-2">
-                            <label for="ic-boundaries" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Boundaries</label>
-                        </div>
-                        <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
-                            <input type="checkbox" id="ic-not-sure-yet" value="Not sure yet" class="mr-2">
-                            <label for="ic-not-sure-yet" class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Not sure yet</label>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300" style="font-family: var(--font-body);">Trimite Mesajul</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-    <footer class="bg-gray-900 text-white py-10">
+    </section>
+    <footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
-                <img src="./images/thumbnail.svg" alt="Logo BUSINESS NAME Variant" class="h-40 mx-auto">
+                <img src="./images/thumbnail.svg" alt="Business through people Variant Logo" class="h-40 mx-auto">
             </div>
-            <p class="text-lg mb-4" style="font-family: var(--font-body);">&copy; 2025 BUSINESS NAME. Toate drepturile rezervate.</p>
+            <p class="text-lg mb-4">&copy; 2025 Business through people. All rights reserved.</p>
             <div class="flex justify-center space-x-6 text-2xl">
                 <a href="#" class="hover:text-gray-400 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2c-5.514 0-10 4.486-10 10s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path d="M14 12c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 6a2 2 0 100-4 2 2 0 000 4z"/><path d="M17.65 6.35c.664.664.664 1.742 0 2.406-.664.664-1.742.664-2.406 0-.664-.664-.664-1.742 0-2.406.664-.664 1.742-.664 2.406 0z"/>
+                        <path
+                            d="M12 2c-5.514 0-10 4.486-10 10s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                        <path
+                            d="M14 12c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 6a2 2 0 100-4 2 2 0 000 4z" />
+                        <path
+                            d="M17.65 6.35c.664.664.664 1.742 0 2.406-.664.664-1.742.664-2.406 0-.664-.664-.664-1.742 0-2.406.664-.664 1.742-.664 2.406 0z" />
                     </svg>
                 </a>
                 <a href="#" class="hover:text-gray-400 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.851.07c1.173.056 1.834.254 2.394.475.6.236 1.05.518 1.503.971.453.453.735.903.971 1.503.221.56.419 1.221.475 2.394.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.851c-.056 1.173-.254 1.834-.475 2.394-.236.6-.518 1.05-.971 1.503-.453.453-.903.735-1.503.971-.56.221-.419 1.221-.475 2.394-.058 1.267-.07 1.647-.07 4.85s.014 3.693.071 4.992c.051 1.07.234 1.666.407 2.091.18.442.417.752.704 1.038.287.287.524.596.704 1.038.173.425-.356-1.021-.407-2.091-.057-1.3-.071-1.725-.071-4.992s-.014-3.693-.071-4.992z"/><circle cx="17.653" cy="6.347" r="1.25"/>
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.851.07c1.173.056 1.834.254 2.394.475.6.236 1.05.518 1.503.971.453.453.735.903.971 1.503.221.56.419 1.221.475 2.394.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.851c-.056 1.173-.254 1.834-.475 2.394-.236.6-.518 1.05-.971 1.503-.453.453-.903.735-1.503.971-.56.221-.419 1.221-.475 2.394-.058 1.267-.07 1.647-.07 4.85s.014 3.693.071 4.992c.051 1.07.234 1.666.407 2.091.18.442.417.752.704 1.038.287.287.524.596.704 1.038.173.425-.356-1.021-.407-2.091-.057-1.3-.071-1.725-.071-4.992s-.014-3.693-.071-4.992c-.051-1.07-.234-1.666-.407-2.091-.18-.442-.417-.752-.704-1.038-.287-.287-.596-.524-1.038-.704-.425-.173-1.021-.356-.407-2.091-.057-1.3-.071-1.725-.071-4.992s.014-3.693.071-4.992z" />
+                        <circle cx="17.653" cy="6.347" r="1.25" />
                     </svg>
                 </a>
                 <a href="#" class="hover:text-gray-400 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-3v-9h3v9zm-1.5-10c-1.34 0-2.5-.964-2.5-2.5s1.16-2.5 2.5-2.5 2.5.964 2.5 2.5-1.16 2.5-2.5 2.5zm11.5 6.5h-3c.092-.767 0-3.5 0-4.5 0-1.002-.057-1.385-.296-1.75-.24-.367-.775-.75-1.928-.75-1.554 0-2.54 1.053-2.54 3.019v3.981h-3s.04-8.003 0-9h3v1.317c.72-1.282 2.052-2.317 3.5-2.317 2.666 0 4 1.597 4 4.739v5.261z"/>
+                        <path
+                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-3v-9h3v9zm-1.5-10c-1.34 0-2.5-.964-2.5-2.5s1.16-2.5 2.5-2.5 2.5.964 2.5 2.5-1.16 2.5-2.5 2.5zm11.5 6.5h-3c.092-.767 0-3.5 0-4.5 0-1.002-.057-1.385-.296-1.75-.24-.367-.775-.75-1.928-.75-1.554 0-2.54 1.053-2.54 3.019v3.981h-3s.04-8.003 0-9h3v1.317c.72-1.282 2.052-2.317 3.5-2.317 2.666 0 4 1.597 4 4.739v5.261z" />
                     </svg>
                 </a>
             </div>
         </div>
     </footer>
 
-    <script src="./assets/js/main.js"></script> 
+    <script src="./assets/js/main.js"></script>
     <script>
-        // Funcționalitatea specifică pentru pagina BUSINESS GROW
-        document.addEventListener('DOMContentLoaded', () => {
-            // Updated ID for the "Let's Talk Business" button in the Hero section
+        document.addEventListener('DOMContentLoaded', function () {
+            // Functionalitate pentru butoanele de contact (Business/Individual)
             const btnContactBusinessHero = document.getElementById('btn-contact-business-hero');
-            const btnContactBusinessPage = document.getElementById('btn-contact-business-page'); // The button from the final section
+            const btnContactBusinessPage = document.getElementById('btn-contact-business-page');
+            const btnContactIndividuals = document.getElementById('btn-contact-individuals'); // Make sure this button exists or remove if not needed.
             const contactFormsContainer = document.getElementById('contact-forms-container');
-            const formBusiness = document.getElementById('form-business');
-            const formIndividuals = document.getElementById('form-individuals'); 
             const closeContactForms = document.getElementById('close-contact-forms');
+            const formBusiness = document.getElementById('form-business');
+            const formIndividuals = document.getElementById('form-individuals'); // Make sure this form exists or remove if not needed.
 
-            // Open the business form when the button in the Hero section is clicked
             if (btnContactBusinessHero) {
                 btnContactBusinessHero.addEventListener('click', () => {
                     contactFormsContainer.classList.remove('hidden');
                     formBusiness.classList.remove('hidden');
-                    formIndividuals.classList.add('hidden'); // Ensure the other form is hidden
+                    if (formIndividuals) formIndividuals.classList.add('hidden');
                 });
             }
 
-            // Open the business form when the button from the final section is clicked
             if (btnContactBusinessPage) {
                 btnContactBusinessPage.addEventListener('click', () => {
                     contactFormsContainer.classList.remove('hidden');
                     formBusiness.classList.remove('hidden');
-                    formIndividuals.classList.add('hidden'); // Ensure the other form is hidden
+                    if (formIndividuals) formIndividuals.classList.add('hidden');
                 });
             }
 
-            // Ensure the close button works
+            // This block handles a button that might not exist in this specific page, but keeping for robustness
+            if (btnContactIndividuals) {
+                btnContactIndividuals.addEventListener('click', () => {
+                    contactFormsContainer.classList.remove('hidden');
+                    formIndividuals.classList.remove('hidden');
+                    if (formBusiness) formBusiness.classList.add('hidden');
+                });
+            }
+
             if (closeContactForms) {
                 closeContactForms.addEventListener('click', () => {
                     contactFormsContainer.classList.add('hidden');
-                    formBusiness.classList.add('hidden');
-                    formIndividuals.classList.add('hidden');
                 });
             }
 
-            // Re-initialize dropdown functionality for modal forms
+            // Functionalitate dropdown multi-select
             function setupMultiSelectDropdown(toggleId, optionsId, selectedTextId) {
                 const dropdownToggle = document.getElementById(toggleId);
                 const dropdownOptions = document.getElementById(optionsId);
                 const selectedTextSpan = document.getElementById(selectedTextId);
-                const checkboxes = dropdownOptions ? dropdownOptions.querySelectorAll('input[type="checkbox"]') : [];
 
-                if (dropdownToggle && dropdownOptions) {
+                if (dropdownToggle && dropdownOptions && selectedTextSpan) {
                     dropdownToggle.addEventListener('click', () => {
                         dropdownOptions.classList.toggle('hidden');
                     });
 
-                    checkboxes.forEach(checkbox => {
+                    dropdownOptions.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
                         checkbox.addEventListener('change', () => {
-                            const selectedValues = Array.from(checkboxes)
-                                .filter(cb => cb.checked)
+                            const selectedValues = Array.from(dropdownOptions.querySelectorAll('input[type="checkbox"]:checked'))
                                 .map(cb => cb.value);
 
                             if (selectedValues.length === 0) {
-                                selectedTextSpan.textContent = selectedTextSpan.dataset.placeholder || 'What’s your current challenge?';
+                                selectedTextSpan.textContent = selectedTextSpan.dataset.placeholder || 'Selectează o provocare';
                                 selectedTextSpan.classList.remove('text-gray-900');
                                 selectedTextSpan.classList.add('text-gray-700');
                             } else {
@@ -612,11 +759,12 @@
                         });
                     });
 
+                    // Adaugă placeholder-ul inițial ca data attribute
                     if (selectedTextSpan) {
                         selectedTextSpan.dataset.placeholder = selectedTextSpan.textContent;
                     }
 
-                    // Close dropdown if clicked outside
+                    // Închide dropdown-ul dacă se dă click în afara lui
                     document.addEventListener('click', (event) => {
                         if (!dropdownToggle.contains(event.target) && !dropdownOptions.contains(event.target)) {
                             dropdownOptions.classList.add('hidden');
@@ -647,4 +795,5 @@
         });
     </script>
 </body>
+
 </html>
