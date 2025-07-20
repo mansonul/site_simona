@@ -1,45 +1,80 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Name - Acasă</title>
+    <title>About - Business through people</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css"> </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Android Chrome favicons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+</head>
+
 <body class="font-sans antialiased text-gray-800">
+
+    <div class="w-full bg-black h-4"></div>
 
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex flex-col items-center">
             <a href="index.html" class="mb-4 md:mb-0">
-                <img src="./images/logo.png" alt="Logo BUSINESS NAME" class="h-32 w-auto max-w-full">
+                <img src="./images/logo/logo.png" alt="Logo Business through people" class="h-20 w-auto max-w-full">
             </a>
-            
+
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
-                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium">HOME</a></li>
-                    <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium">ABOUT</a></li>
-                    <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium">BUSINESS GROW</a></li>
-                    <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium">PERSONAL GROW</a></li>
-                    <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium">INSIGHTS</a></li>
-                    <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a></li>
+                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">HOME</a></li>
+                    <li><a href="about.html" class="text-gray-900 font-bold"
+                            style="font-family: var(--font-body);">ABOUT</a></li>
+                    <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">BUSINESS GROW</a></li>
+                    <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">PERSONAL GROW</a></li>
+                    <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">INSIGHTS</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium"
+                            style="font-family: var(--font-body);">CONTACT</a></li>
                 </ul>
             </nav>
 
             <button id="mobile-menu-button" class="md:hidden absolute top-4 right-4 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 pb-4">
             <ul class="flex flex-col items-center space-y-4">
-                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">HOME</a></li>
-                <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">ABOUT</a></li>
-                <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">BUSINESS GROW</a></li>
-                <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">PERSONAL GROW</a></li>
-                <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">INSIGHTS</a></li>
-                <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block">CONTACT</a></li>
+                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">HOME</a></li>
+                <li><a href="about.html" class="text-gray-900 font-bold py-2 block"
+                        style="font-family: var(--font-body);">ABOUT</a></li>
+                <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">BUSINESS GROW</a></li>
+                <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">PERSONAL GROW</a></li>
+                <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">INSIGHTS</a></li>
+                <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -210,17 +245,27 @@
 
     </main>
 
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-lg mb-4">&copy; 2025 BUSINESS NAME. Toate drepturile rezervate.</p>
-            <div class="flex justify-center space-x-6 text-2xl">
-                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-gray-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+<footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
+    <div class="container mx-auto px-4 text-center">
+        <div class="mb-6">
+            <img src="./images/thumbnail.svg" alt="Business through people Variant Logo" class="h-40 mx-auto">
         </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+        <p class="text-lg mb-4">&copy; 2025 Business through people. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+            <!-- Facebook Icon -->
+            <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <img src="./images/logo/icons8-facebook-50.svg" alt="Facebook Icon" class="w-8 h-8">
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <img src="./images/logo/icons8-instagram-50.svg" alt="Instagram Icon" class="w-8 h-8">
+            </a>
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <img src="./images/logo/icons8-linkedin-50.svg" alt="LinkedIn Icon" class="w-8 h-8">
+            </a>
+        </div>
+    </div>
+</footer>
     <script src="./assets/js/main.js"></script> </body>
 </html>
