@@ -66,8 +66,8 @@
                 <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
                         style="font-family: var(--font-body);">HOME</a></li>
                 <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                    style="font-family: var(--font-body);">ABOUT</a></li>
-                    <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">ABOUT</a></li>
+                <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
                         style="font-family: var(--font-body);">BUSINESS GROW</a></li>
                 <li><a href="personal-grow.html" class="text-gray-900 font-bold py-2 block"
                         style="font-family: var(--font-body);">PERSONAL GROW</a></li>
@@ -79,173 +79,395 @@
         </div>
     </header>
 
-    <main>
-        <section id="home" class="flex flex-col">
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+1+-+People+Growth'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Growth that starts with people</h2>
-                    <p class="text-xl md:text-2xl mb-8">Because when people grow, everything does.</p>
-                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                        <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Businesses</a>
-                        <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Individuals</a>
+    <main class="pt-0 md:pt-0">
+        <section class="relative hero-banner-main text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" style="background-color: var(--color-background-desktop);">
+            <div class="relative z-10 container mx-auto flex flex-col items-center justify-center">
+                <div class="flex flex-col text-center max-w-8xl mx-auto mb-8 md:mb-0">
+                    <h2 class="font-extrabold mb-4 leading-tight"
+                        style="font-family: var(--font-heading);">For Individuals</h2>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90" style="font-family: var(--font-body);">Personal growth workshops for people who are ready to stop waiting and start living</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white text-gray-800">
+            <div class="container mx-auto max-w-8xl">
+                <p class="text-xl md:text-2xl mb-10" style="font-family: var(--font-body);">Ready to step into your fullest potential? Here, you’ll discover the clarity, confidence, and connection you need to transform your life from the inside out. Our practical, empowering programs guide you to deepen self-awareness, communicate with impact, and build authentic relationships so you can lead with purpose and joy every day. Take the first step toward the life you deserve.</p>
+            </div>
+        </section>
+
+        <section id="personal-programs-list" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <div class="container mx-auto max-w-8xl">
+                <h2 class="text-4xl md:text-5xl font-semibold text-center mb-16" style="font-family: var(--font-body);">
+                    Our Personal Growth Programs</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="bg-white p-4 rounded-lg shadow-md border-t-4 flex flex-col justify-center" style="border-color: var(--color-accent-brown);">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                            style="font-family: var(--font-body);">Feel. Speak. Lead.</h4>
+                        <div class="space-y-3 text-gray-700 text-lg">
+                            <p class="text-justify" style="font-family: var(--font-body);">An 8-week practical workshop for professionals ready to lead with presence by deepening emotional intelligence, refining communication, and strengthening connection in work and relationships.</p>
+                            <p class="text-justify" style="font-family: var(--font-body);">This is not about theory. It’s about becoming more attuned to yourself, to others, and to the moment you're in. You’ll leave with real tools, honest insight, and the confidence to lead in a way that feels true to who you are.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md border-t-4 flex flex-col justify-center" style="border-color: var(--color-accent-brown);">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                            style="font-family: var(--font-body);">Boundaries & Bridges</h4>
+                        <div class="space-y-3 text-gray-700 text-lg">
+                            <p class="text-justify" style="font-family: var(--font-body);">A hands-on online training and toolkit for professionals who want to break old patterns and build authentic, balanced connections at work and at home.</p>
+                            <p class="text-justify" style="font-family: var(--font-body);">This isn’t about fixing people. It’s about learning how to show up differently with clarity, respect, and emotional presence. You’ll walk away with practical tools, fresh insight, and a new way of relating built on honesty, boundaries, and mutual understanding.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md border-t-4 flex flex-col justify-center" style="border-color: var(--color-accent-brown);">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                            style="font-family: var(--font-body);">The art of starting again</h4>
+                        <div class="space-y-3 text-gray-700 text-lg">
+                            <p class="text-justify" style="font-family: var(--font-body);">A practical workshop with guided exercises and journaling designed to help you create your next life chapter with clarity and purposeful action.</p>
+                            <p class="text-justify" style="font-family: var(--font-body);">This isn’t about quick fixes, it's about thoughtful reflection and intentional steps. You’ll gain tools and insights to craft a fresh path forward that feels authentic and aligned with your true self.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md border-t-4 flex flex-col justify-center" style="border-color: var(--color-accent-brown);">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900"
+                            style="font-family: var(--font-body);">Emotional mastery</h4>
+                        <div class="space-y-3 text-gray-700 text-lg">
+                            <p class="text-justify" style="font-family: var(--font-body);">A self-paced video workshop focused on growing emotional maturity, setting healthy boundaries, and cultivating a joyful, intentional daily life.</p>
+                            <p class="text-justify" style="font-family: var(--font-body);">Move beyond simply bouncing back learn how to thrive with greater awareness, grace, and balance. With practical strategies and mindful practices, you’ll refine your inner strength and shape a life that reflects your deepest values.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+2+-+Purpose+Culture'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Lead with Purpose. Live Your Culture. Deliver Results.</h2>
-                    <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+3+-+Personal+Story'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Own your story. Lead yourself. Grow on purpose.</h2>
-                    <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Start Now</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+4+-+People+Culture+Growth'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">People First. Culture Forward. Accelerate Growth.</h2>
-                    <a href="about.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+5+-+Contact'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-8">Contact</h2>
-                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                        <button id="btn-contact-business" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About Businesses</button>
-                        <button id="btn-contact-individuals" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About You</button>
-                    </div>
-                </div>
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100 text-center">
+            <div class="container mx-auto max-w-5xl">
+                <h2 id="tailored-approach-heading" class="text-4xl md:text-5xl font-semibold mb-8"
+                    style="font-family: var(--font-body);">Need a tailored approach?</h2>
+                <p class="text-xl md:text-2xl mb-10 text-gray-700" style="font-family: var(--font-body);">We also offer
+                    customized programs tailored to the specific needs of each individual, to effectively support their
+                    personal development goals.</p>
+                <button id="btn-contact-individuals"
+                    class="button-contrast">Let's
+                    Discuss Your Personal Needs
+                </button>
             </div>
         </section>
-
-        <section id="contact-forms-container" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
-                <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
-                
-                <div id="form-business" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="business-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="business-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Culture misalignment">Culture misalignment</option>
-                                <option value="Low engagement">Low engagement</option>
-                                <option value="Leadership gaps">Leadership gaps</option>
-                                <option value="Team conflict">Team conflict</option>
-                                <option value="Change fatigue">Change fatigue</option>
-                                <option value="Poor collaboration">Poor collaboration</option>
-                                <option value="Unclear roles">Unclear roles</option>
-                                <option value="Communication issues">Communication issues</option>
-                                <option value="Resistance to change">Resistance to change</option>
-                                <option value="Capability gaps">Capability gaps</option>
-                                <option value="Underperformance">Underperformance</option>
-                                <option value="New management">New management</option>
-                                <option value="Scaling challenges">Scaling challenges</option>
-                                <option value="Strategy execution">Strategy execution</option>
-                                <option value="Low trust">Low trust</option>
-                                <option value="High turnover">High turnover</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
-                </div>
-
-                <div id="form-individuals" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="individual-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="individual-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Overgiving">Overgiving</option>
-                                <option value="Avoidant patterns">Avoidant patterns</option>
-                                <option value="Poor communication">Poor communication</option>
-                                <option value="Feeling disconnected">Feeling disconnected</option>
-                                <option value="Conflict in relationships">Conflict in relationships</option>
-                                <option value="People-pleasing">People-pleasing</option>
-                                <option value="Midlife shift">Midlife shift</option>
-                                <option value="Starting over">Starting over</option>
-                                <option value="Career change">Career change</option>
-                                <option value="Pursuing meaning">Pursuing meaning</option>
-                                <option value="Living on autopilot">Living on autopilot</option>
-                                <option value="No time for others">No time for others</option>
-                                <option value="No time for self">No time for self</option>
-                                <option value="Longing connection">Longing connection</option>
-                                <option value="Boundaries">Boundaries</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-section-placeholder" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina About.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">about.html</code>.</p>
-        </section>
-        
-        <section id="business-grow-section-placeholder" class="py-20 bg-white text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Business Grow.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">business-grow.html</code>.</p>
-        </section>
-
-        <section id="personal-grow-section-placeholder" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Personal Grow.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">personal-grow.html</code>.</p>
-        </section>
-
-        <section id="insights-section-placeholder" class="py-20 bg-white text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Insights.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">insights.html</code>.</p>
-        </section>
-
-        <section id="contact-section-fallback" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Contact.</h2>
-            <p class="mt-4">Conținutul real (dacă nu e gestionat integral de pop-up-uri) va fi în fișierul <code class="bg-gray-200 p-1 rounded">contact.html</code>.</p>
-        </section>
-
     </main>
 
-    <footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
+    <section id="contact-forms-container"
+        class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
+            <button id="close-contact-forms"
+                class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+
+            <div id="form-business" class="hidden">
+                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
+                    (Business)</h2>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Company"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email Address"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone (Optional)"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div class="relative">
+                        <div id="business-challenge-dropdown-toggle"
+                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            style="font-family: var(--font-body);">
+                            <span id="selected-business-challenges" class="text-gray-700">What’s your current
+                                challenge?</span>
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div id="business-challenge-options"
+                            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-culture-misalignment" value="Culture misalignment"
+                                    class="mr-2">
+                                <label for="bc-culture-misalignment" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Culture misalignment</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-low-engagement" value="Low engagement" class="mr-2">
+                                <label for="bc-low-engagement" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Low engagement</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-leadership-gaps" value="Leadership gaps" class="mr-2">
+                                <label for="bc-leadership-gaps" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Leadership gaps</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-team-conflict" value="Team conflict" class="mr-2">
+                                <label for="bc-team-conflict" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Team conflict</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-innovation" value="Lack of innovation"
+                                    class="mr-2">
+                                <label for="bc-lack-of-innovation" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of innovation</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-poor-communication" value="Poor communication"
+                                    class="mr-2">
+                                <label for="bc-poor-communication" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Poor communication</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-high-turnover" value="High turnover" class="mr-2">
+                                <label for="bc-high-turnover" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">High turnover</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-resistance-to-change" value="Resistance to change"
+                                    class="mr-2">
+                                <label for="bc-resistance-to-change" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Resistance to change</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-unclear-strategy" value="Unclear strategy" class="mr-2">
+                                <label for="bc-unclear-strategy" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Unclear strategy</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-performance-issues" value="Performance issues"
+                                    class="mr-2">
+                                <label for="bc-performance-issues" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Performance issues</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-accountability" value="Lack of accountability"
+                                    class="mr-2">
+                                <label for="bc-lack-of-accountability" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of accountability</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-poor-decision-making" value="Poor decision-making"
+                                    class="mr-2">
+                                <label for="bc-poor-decision-making" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Poor decision-making</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-ineffective-meetings" value="Ineffective meetings"
+                                    class="mr-2">
+                                <label for="bc-ineffective-meetings" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Ineffective meetings</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-unaligned-goals" value="Unaligned goals" class="mr-2">
+                                <label for="bc-unaligned-goals" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Unaligned goals</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-lack-of-clear-roles" value="Lack of clear roles"
+                                    class="mr-2">
+                                <label for="bc-lack-of-clear-roles" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Lack of clear roles</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-insufficient-feedback" value="Insufficient feedback"
+                                    class="mr-2">
+                                <label for="bc-insufficient-feedback" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Insufficient feedback</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-talent-retention" value="Talent retention" class="mr-2">
+                                <label for="bc-talent-retention" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Talent retention</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-training-development" value="Training & Development"
+                                    class="mr-2">
+                                <label for="bc-training-development" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Training & Development</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-post-merger-integration" value="Post-merger integration"
+                                    class="mr-2">
+                                <label for="bc-post-merger-integration" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Post-merger integration</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-succession-planning" value="Succession planning"
+                                    class="mr-2">
+                                <label for="bc-succession-planning" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Succession planning</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-work-life-balance" value="Work-life balance" class="mr-2">
+                                <label for="bc-work-life-balance" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Work-life balance</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="bc-burnout" value="Burnout" class="mr-2">
+                                <label for="bc-burnout" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Burnout</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                        style="font-family: var(--font-body);">Submit</button>
+                </form>
+            </div>
+
+            <div id="form-individuals" class="hidden">
+                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
+                    (Individuals)</h2>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email Address"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone (Optional)"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);">
+                    </div>
+                    <div class="relative">
+                        <div id="individual-challenge-dropdown-toggle"
+                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);">
+                            <span id="selected-individual-challenges" class="text-gray-700">What’s your current
+                                challenge?</span>
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div id="individual-challenge-options"
+                            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-career-transition" value="Career transition" class="mr-2">
+                                <label for="ic-career-transition" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Career transition</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-leadership-development" value="Leadership development"
+                                    class="mr-2">
+                                <label for="ic-leadership-development" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Leadership development</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-communication-skills" value="Communication skills"
+                                    class="mr-2">
+                                <label for="ic-communication-skills" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Communication skills</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-conflict-resolution" value="Conflict resolution"
+                                    class="mr-2">
+                                <label for="ic-conflict-resolution" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Conflict resolution</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-stress-management" value="Stress management" class="mr-2">
+                                <label for="ic-stress-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Stress management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-personal-branding" value="Personal branding" class="mr-2">
+                                <label for="ic-personal-branding" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Personal branding</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-public-speaking" value="Public speaking" class="mr-2">
+                                <label for="ic-public-speaking" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Public speaking</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-time-management" value="Time management" class="mr-2">
+                                <label for="ic-time-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Time management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-goal-setting" value="Goal setting" class="mr-2">
+                                <label for="ic-goal-setting" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Goal setting</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-decision-making" value="Decision-making" class="mr-2">
+                                <label for="ic-decision-making" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Decision-making</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-confidence-building" value="Confidence building"
+                                    class="mr-2">
+                                <label for="ic-confidence-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Confidence building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-work-life-balance" value="Work-life balance" class="mr-2">
+                                <label for="ic-work-life-balance" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Work-life balance</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-burnout-prevention" value="Burnout prevention"
+                                    class="mr-2">
+                                <label for="ic-burnout-prevention" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Burnout prevention</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-resilience-building" value="Resilience building"
+                                    class="mr-2">
+                                <label for="ic-resilience-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Resilience building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-adaptability" value="Adaptability" class="mr-2">
+                                <label for="ic-adaptability" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Adaptability</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-emotional-intelligence" value="Emotional Intelligence"
+                                    class="mr-2">
+                                <label for="ic-emotional-intelligence" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Emotional Intelligence</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--color-accent-brown);"
+                            style="font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                        style="font-family: var(--font-body);">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+<footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
     <div class="container mx-auto px-4 text-center">
         <div class="mb-6">
             <img src="./images/thumbnail.svg" alt="Business through people Variant Logo" class="h-40 mx-auto">
@@ -268,6 +490,8 @@
     </div>
 </footer>
 
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script> </body>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

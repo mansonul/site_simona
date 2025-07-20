@@ -5,7 +5,7 @@
     --color-gold-custom: #FFD700;
     --color-highlight-text: #E5B18D;
     --color-background-desktop: #222222;
-    --color-accent-brown: #836957; /* Added new variable for the requested color */
+    --color-accent-brown: #E5B18D; /* Added new variable for the requested color */
 }
 
 .text-gold-custom {
@@ -506,4 +506,46 @@ nav ul li a {
 #business-programs-list h3,
 #tailored-approach-heading { /* Targeting the "Need a Tailored Approach?" h2 by ID */
     color: var(--color-accent-brown) !important; /* Using !important to ensure override */
+}
+
+
+.button-contrast {
+    /* display: inline-block;
+    color: var(--color-accent-brown);
+    background-color: var(--color-background-desktop);
+    border: 1px solid var(--color-accent-brown);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    cursor: pointer; */
+
+    border-color: var(--color-highlight-text);
+    color: var(--color-highlight-text);
+    background-color: var(--color-background-desktop);
+    padding: 0.2rem 1.5rem;
+    border-width: 1px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button-contrast:hover {
+    /* background-color: rgba(255, 255, 255, 0.4);  */
+    background-color: var(--color-highlight-text);
+    color: rgba(255, 255, 255, 1);
+    /* border-color: var(--color-background-desktop); */
+    transform: scale(1.05);
 }
