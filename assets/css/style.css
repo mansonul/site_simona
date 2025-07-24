@@ -505,7 +505,7 @@ nav ul li a {
 #tailored-business-programs-list h2,
 #tailored-business-programs-list h3,
 #tailored-approach-heading { /* Targeting the "Need a Tailored Approach?" h2 by ID */
-    color: var(--color-accent-brown) !important; /* Using !important to ensure override */
+    color: var(--color-background-desktop) !important; /* Using !important to ensure override */
 }
 
 
