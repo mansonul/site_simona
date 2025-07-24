@@ -20,10 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Funcționalitate pentru butoanele de contact (Business/Individual) și formulare
-    const btnContactBusiness = document.getElementById('btn-contact-business'); // Buton generic de Business (poate exista pe index.html)
     const btnContactIndividuals = document.getElementById('btn-contact-individuals'); // Buton generic pentru Individuali (poate exista pe index.html)
-    const btnContactBusinessHero = document.getElementById('btn-contact-business-hero'); // Buton specific paginii business-grow.html (secțiunea Hero)
-    const btnContactBusinessPage = document.getElementById('btn-contact-business-page'); // Buton specific paginii business-grow.html (secțiunea de jos)
 
     const contactFormsContainer = document.getElementById('contact-forms-container');
     const closeContactForms = document.getElementById('close-contact-forms');
@@ -43,22 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Adaugă listeneri pentru butoanele de contact Business
-    if (btnContactBusiness) {
-        btnContactBusiness.addEventListener('click', () => {
+    // Adaugă listeneri pentru butoanele de contact Business folosind clasa comună
+    const businessContactButtons = document.querySelectorAll('.open-business-form');
+    businessContactButtons.forEach(button => {
+        button.addEventListener('click', () => {
             openContactForm(formBusiness, formIndividuals);
         });
-    }
-    if (btnContactBusinessHero) {
-        btnContactBusinessHero.addEventListener('click', () => {
-            openContactForm(formBusiness, formIndividuals);
-        });
-    }
-    if (btnContactBusinessPage) {
-        btnContactBusinessPage.addEventListener('click', () => {
-            openContactForm(formBusiness, formIndividuals);
-        });
-    }
+    });
 
     // Adaugă listener pentru butonul de contact Individuals
     if (btnContactIndividuals) {

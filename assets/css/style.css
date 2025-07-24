@@ -502,8 +502,8 @@ nav ul li a {
 
 /* Updated heading colors */
 #what-happens h2,
-#business-programs-list h2,
-#business-programs-list h3,
+#tailored-business-programs-list h2,
+#tailored-business-programs-list h3,
 #tailored-approach-heading { /* Targeting the "Need a Tailored Approach?" h2 by ID */
     color: var(--color-accent-brown) !important; /* Using !important to ensure override */
 }
