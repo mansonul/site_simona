@@ -30,7 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
+            /* text-align: center; */
             color: white;
             background-image: url("images/Simona-Istrate.webp"); /* Placeholder image */
             background-size: cover;
@@ -60,6 +60,33 @@
             font-size: 2em;
             color: #666;
         }
+        .left-floating-div-boxx-about-page{
+            max-width: 600px;
+            padding: 3rem 4rem;
+            transition: all .2s;
+            left: 8%;
+            right: auto;
+            /* background-color: var(--swatch--main--white); */
+            max-width: 625px;
+            margin-left: 0;
+            padding: 3rem 4rem;
+            position: absolute;
+            inset: auto auto auto 3%;
+        }
+
+        .about-marie---feature{
+            background-image: url(https://cdn.prod.website-files.com/5f2ae813361eff3ad9282b29/67000a44ac05a6927ddfa6de_Marie_EIFExperience%20\(1\).webp);
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            min-height: 80vh;
+            padding: 0%;
+            display: flex;
+            position: relative;}
     </style>
 </head>
 
@@ -131,8 +158,15 @@
             </div>
         </section>
 
+        <!-- <section class="about-marie---feature">
+            <div class="left-floating-div-boxx-about-page u-vflex">
+                <p>From the non-stop frenzy working on the floor of the New York Stock Exchange, to the well-heeled halls of Condé Nast publishing, to choreographing hip-hop on MTV and being one of the world’s first Nike Elite Dance Athletes, to publishing two international bestsellers, to founding a digital education company named in the Inc. 500, I’m undeniable proof that...</p>
+                <h2>Traditional rules were made to be broken.</h2>
+            </div>
+        </section> -->
+
         <section class="py-16 px-2 sm:px-4 lg:px-6 text-white hero-section" style="background-color: var(--color-background-desktop);">
-            <div class="mobile-card-content p-4 bg-gray-50">
+            <div class="mobile-card-content p-4 bg-gray-50 left-floating-div-boxx-about-page">
                 <h3 class="text-2xl font-semibold mb-2"
                     style="font-family: var(--font-body); color: var(--color-background-desktop);">
                     Hello, I’m Simona.</h3>
@@ -146,7 +180,7 @@ My mission is simple: to help people grow, feel seen, and feel supported, one me
         </section>
 
         <section class="py-16 px-2 sm:px-4 lg:px-6 bg-white text-gray-800">
-            <div class="container mx-auto max-w-6xl">
+            <div class="container mx-auto max-w-7xl">
                 <h3 class="text-2xl font-bold mb-16 text-center" style="font-family: var(--font-heading); color: var(--color-accent-brown);">What We Believe</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     <div class="p-4 text-gray-900 text-center" style="background-color: white;">
@@ -170,7 +204,7 @@ My mission is simple: to help people grow, feel seen, and feel supported, one me
         </section>
 
         <section class="py-16 px-2 sm:px-4 lg:px-6 text-white" style="background-color: var(--color-background-desktop);">
-            <div class="container mx-auto max-w-6xl">
+            <div class="container mx-auto max-w-7xl">
                 <h3 class="text-2xl font-bold mb-16 text-center" style="font-family: var(--font-heading); color: var(--color-accent-brown);">How We Work</h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
