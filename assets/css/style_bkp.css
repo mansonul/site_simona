@@ -886,7 +886,7 @@ nav ul li a {
 
 .slider-container {
     position: relative;
-    /* padding: 0 20px; */
+    padding: 0 20px; /* Spațiu pentru săgețile laterale */
     display: flex; /* Activează flexbox pentru centrare verticală */
     align-items: center; /* Centrează vertical conținutul */
     justify-content: center; /* Centrează orizontal slider-content-wrapper */
@@ -921,11 +921,11 @@ nav ul li a {
 }
 
 .left-arrow {
-    left: -45px; /* Poziționat în afara slider-container */
+    left: -30px; /* Poziționat în afara slider-container */
 }
 
 .right-arrow {
-    right: -45px; /* Poziționat în afra slider-container */
+    right: -30px; /* Poziționat în afra slider-container */
 }
 
 /* Paginarea desktop (dreptunghiuri, orizontal) */
@@ -1049,7 +1049,6 @@ nav ul li a {
         /* margin-left: 0px; */
         margin-left: -7px;
         margin-right: 7px;
-        padding-left: 7px;
         /* Păstrăm la 0px pentru a apropia paginarea */
         gap: 8px;
         /* Spațiu între puncte */

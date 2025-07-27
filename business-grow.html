@@ -82,7 +82,8 @@
 
     <main class="pt-0 md:pt-0">
 
-        <section id="business-growth-banner" class="relative hero-banner-main text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section id="business-growth-banner"
+            class="relative hero-banner-main text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <div class="relative z-10 container mx-auto flex flex-col items-center justify-center">
                 <div class="flex flex-col text-center max-w-6xl mx-auto mb-8 md:mb-0">
                     <h2 class="font-extrabold mb-4 leading-tight" style="font-family: var(--font-heading);">When your
@@ -223,36 +224,40 @@
             </div>
         </section>
 
-        <section id="business-programs-list" class="py-8 pt-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--color-background-desktop);">
+        <!-- <section id="business-programs-list" class="py-8 pt-20 px-4 sm:px-6 lg:px-8"
+            style="background-color: var(--color-background-desktop);">
             <div class="container mx-auto max-w-7xl">
                 <h2 class="text-4xl md:text-5xl font-semibold text-center mb-16"
                     style="font-family: var(--font-heading); color: var(--color-accent-brown);">Our workshops</h2>
 
-                <!-- Noul wrapper pentru slider și paginare -->
                 <div class="slider-and-pagination-wrapper">
                     <div class="slider-container relative">
-                        <div class="slider-content-wrapper"> <!-- Wrapper pentru slide-uri cu overflow: hidden -->
-                            <div class="slides-wrapper flex" id="slides-wrapper">
-                                <!-- ORIGINAL SLIDES START HERE -->
+                        <button id="prev-slide" class="slider-arrow left-arrow">
+                            &#10094; </button>
 
-                                <!-- Slide 1 -->
+                        <div class="slider-content-wrapper" style="overflow: hidden;">
+                            <div class="slides-wrapper flex" id="slides-wrapper">
                                 <div class="slide flex-shrink-0 w-full">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
-                                        <!-- Card 1: Systemic Leadership -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
-                                                        style="font-family: var(--font-heading);">Systemic Leadership</h4>
+                                                        style="font-family: var(--font-heading);">Systemic Leadership
+                                                    </h4>
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Cultivate healthy team cultures by applying a whole-system perspective.</p>
-                                                    <p>Recognize hidden patterns, roles, and team dynamics that influence behavior.</p>
+                                                    <p>Cultivate healthy team cultures by applying a whole-system
+                                                        perspective.</p>
+                                                    <p>Recognize hidden patterns, roles, and team dynamics that
+                                                        influence behavior.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
@@ -260,8 +265,10 @@
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Explore leadership as a relational function, not just a position.</p>
-                                                <p>Strengthen clarity of roles, feedback, and boundaries to boost engagement.</p>
+                                                    <p>Explore leadership as a relational function, not just a position.
+                                                    </p>
+                                                    <p>Strengthen clarity of roles, feedback, and boundaries to boost
+                                                        engagement.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -270,7 +277,8 @@
 
                                 <div class="slide flex-shrink-0 w-full">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
@@ -284,8 +292,8 @@
                                             </div>
                                         </div>
 
-                                        <!-- Card 4: Humans & AI -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
@@ -293,69 +301,78 @@
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Anticipate behavioural shifts as AI reshapes roles and workflows.</p>
-                                                    <p>Strengthen empathy, adaptability, and ethical decision-making.</p>
+                                                    <p>Anticipate behavioural shifts as AI reshapes roles and workflows.
+                                                    </p>
+                                                    <p>Strengthen empathy, adaptability, and ethical decision-making.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Slide 3 -->
                                 <div class="slide flex-shrink-0 w-full">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
-                                        <!-- Card 5: Negotiation Skills -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
-                                                        style="font-family: var(--font-heading);">Negotiation Skills</h4>
+                                                        style="font-family: var(--font-heading);">Negotiation Skills
+                                                    </h4>
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Learn to uncover true interests, handle objections, and build mutual value.</p>
-                                                    <p>Navigate difficult conversations with confidence, empathy, and clarity.</p>
+                                                    <p>Learn to uncover true interests, handle objections, and build
+                                                        mutual value.</p>
+                                                    <p>Navigate difficult conversations with confidence, empathy, and
+                                                        clarity.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Card 6: Consultative Sales -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
-                                                        style="font-family: var(--font-heading);">Consultative Sales</h4>
+                                                        style="font-family: var(--font-heading);">Consultative Sales
+                                                    </h4>
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Understand buying motivations and tailor your message to create relevance.</p>
-                                                    <p>Build trust, manage objections, and close with confidence and integrity.</p>
+                                                    <p>Understand buying motivations and tailor your message to create
+                                                        relevance.</p>
+                                                    <p>Build trust, manage objections, and close with confidence and
+                                                        integrity.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Slide 4 -->
                                 <div class="slide flex-shrink-0 w-full">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
-                                        <!-- Card 7: Customer Experiences -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
-                                                        style="font-family: var(--font-heading);">Customer Experiences</h4>
+                                                        style="font-family: var(--font-heading);">Customer Experiences
+                                                    </h4>
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Understand the full customer journey and key emotional touchpoints.</p>
-                                                    <p>Align mindset, behavior, and communication to consistently exceed expectations.</p>
+                                                    <p>Understand the full customer journey and key emotional
+                                                        touchpoints.</p>
+                                                    <p>Align mindset, behavior, and communication to consistently exceed
+                                                        expectations.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Card 8: Problem Solving -->
-                                        <div class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
                                             <div class="card-content-grid">
                                                 <div class="flex items-center">
                                                     <h4 class="text-3xl font-extrabold text-center"
@@ -363,8 +380,192 @@
                                                 </div>
                                                 <div class="text-lg text-justify"
                                                     style="font-family: var(--font-body);">
-                                                    <p>Develop a structured mindset to identify root causes and generate effective solutions.</p>
-                                                    <p>Tackle challenges with clarity, creativity, and confidence in any professional context.</p>
+                                                    <p>Develop a structured mindset to identify root causes and generate
+                                                        effective solutions.</p>
+                                                    <p>Tackle challenges with clarity, creativity, and confidence in any
+                                                        professional context.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="next-slide" class="slider-arrow right-arrow">
+                            &#10095; </button>
+                    </div>
+
+                    <div class="pagination-dots" id="pagination-dots">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="business-programs-list" class="py-8 pt-20 px-4 sm:px-6 lg:px-8"
+            style="background-color: var(--color-background-desktop);">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4 md:mb-10"
+                    style="font-family: var(--font-heading); color: var(--color-accent-brown);">Our workshops</h2>
+
+                <div class="mobile-layout-wrapper flex flex-col md:block">
+                    <div class="slider-container relative">
+                        <button id="prev-slide-desktop" class="slider-arrow left-arrow hidden md:block">
+                            &#10094;
+                        </button>
+                        <button id="next-slide-desktop" class="slider-arrow right-arrow hidden md:block">
+                            &#10095;
+                        </button>
+
+                        <div class="slider-content-wrapper" style="overflow: hidden;">
+                            <div class="slides-wrapper flex md:block" id="slides-wrapper">
+                                <div class="slide flex-shrink-0 w-full">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Systemic Leadership
+                                                    </h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Cultivate healthy team cultures by applying a whole-system
+                                                        perspective.</p>
+                                                    <p>Recognize hidden patterns, roles, and team dynamics that
+                                                        influence behavior.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">People Management</h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Explore leadership as a relational function, not just a position.
+                                                    </p>
+                                                    <p>Strengthen clarity of roles, feedback, and boundaries to boost
+                                                        engagement.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide flex-shrink-0 w-full">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Managing Change</h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Identify resistance as useful systemic feedback.</p>
+                                                    <p>Build trust, stability, and alignment in dynamic contexts.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Humans & AI</h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Anticipate behavioural shifts as AI reshapes roles and workflows.
+                                                    </p>
+                                                    <p>Strengthen empathy, adaptability, and ethical decision-making.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide flex-shrink-0 w-full">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Negotiation Skills
+                                                    </h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Learn to uncover true interests, handle objections, and build
+                                                        mutual value.</p>
+                                                    <p>Navigate difficult conversations with confidence, empathy, and
+                                                        clarity.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Consultative Sales
+                                                    </h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Understand buying motivations and tailor your message to create
+                                                        relevance.</p>
+                                                    <p>Build trust, manage objections, and close with confidence and
+                                                        integrity.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide flex-shrink-0 w-full">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Customer Experiences
+                                                    </h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Understand the full customer journey and key emotional
+                                                        touchpoints.</p>
+                                                    <p>Align mindset, behavior, and communication to consistently exceed
+                                                        expectations.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="p-5 rounded-lg shadow-md flex flex-col justify-between card-image-style">
+                                            <div class="card-content-grid">
+                                                <div class="flex items-center">
+                                                    <h4 class="text-3xl font-extrabold text-center"
+                                                        style="font-family: var(--font-heading);">Problem Solving</h4>
+                                                </div>
+                                                <div class="text-lg text-justify"
+                                                    style="font-family: var(--font-body);">
+                                                    <p>Develop a structured mindset to identify root causes and generate
+                                                        effective solutions.</p>
+                                                    <p>Tackle challenges with clarity, creativity, and confidence in any
+                                                        professional context.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -374,9 +575,10 @@
                         </div>
                     </div>
 
-                    <!-- Pagination Dots -->
-                    <div class="pagination-dots" id="pagination-dots">
-                        <!-- Dots will be generated by JavaScript -->
+                    <div class="pagination-dots hidden md:flex" id="pagination-dots-desktop">
+                    </div>
+
+                    <div class="pagination-dots-mobile md:hidden" id="pagination-dots-mobile">
                     </div>
                 </div>
             </div>
@@ -726,17 +928,20 @@
         <div class="container mx-auto px-4 text-center">
             <p class="text-lg mb-4">Follow me</p>
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer"
+                    class="hover:opacity-75 transition duration-300">
                     <img src="./images/logo/icons8-facebook-50.svg" alt="Facebook Icon" class="w-8 h-8">
                 </a>
-                <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer"
+                    class="hover:opacity-75 transition duration-300">
                     <img src="./images/logo/icons8-instagram-50.svg" alt="Instagram Icon" class="w-8 h-8">
                 </a>
-                <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
+                <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer"
+                    class="hover:opacity-75 transition duration-300">
                     <img src="./images/logo/icons8-linkedin-50.svg" alt="LinkedIn Icon" class="w-8 h-8">
                 </a>
             </div>
-            <p class="text-lg">2025 &copy; Business Through People.<br/>All rights reserved.</p>
+            <p class="text-lg">2025 &copy; Business Through People.<br />All rights reserved.</p>
         </div>
     </footer>
 
@@ -744,68 +949,162 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slidesWrapper = document.getElementById('slides-wrapper');
-            const slides = Array.from(slidesWrapper.children); 
-            const totalSlides = slides.length; 
-            const paginationDotsContainer = document.getElementById('pagination-dots');
-            let dots = [];
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
 
-            let currentSlideIndex = 0; 
-            const mobileBreakpoint = 768;
+            // Butoane și paginare desktop
+            const prevButtonDesktop = document.getElementById('prev-slide-desktop');
+            const nextButtonDesktop = document.getElementById('next-slide-desktop');
+            const paginationDotsDesktopContainer = document.getElementById('pagination-dots-desktop');
 
-            function isMobile() {
-                return window.innerWidth < mobileBreakpoint;
-            }
+            // Paginare mobil
+            const paginationDotsMobileContainer = document.getElementById('pagination-dots-mobile');
 
-            function updatePaginationDots() {
-                paginationDotsContainer.innerHTML = ''; 
-                dots = []; 
+            let currentIndex = 0;
+
+            // Funcție pentru a determina dacă suntem pe mobil (bazat pe CSS media query)
+            const isMobileView = () => {
+                const isMobile = window.matchMedia('(max-width: 767px)').matches;
+                console.log(`isMobileView: ${isMobile}`); // Log for mobile view detection
+                return isMobile;
+            };
+
+            // Funcție pentru a crea punctele de paginare (comună pentru ambele)
+            function createPaginationDots(container) {
+                container.innerHTML = '';
                 for (let i = 0; i < totalSlides; i++) {
                     const dot = document.createElement('span');
-                    dot.classList.add('dot');
-                    if (i === currentSlideIndex) { 
-                        dot.classList.add('active');
-                    }
-                    dot.dataset.index = i; 
-                    paginationDotsContainer.appendChild(dot);
-                    dots.push(dot);
-                    dot.addEventListener('click', (e) => {
-                        if (!e.target.classList.contains('active')) {
-                            showSlide(parseInt(e.target.dataset.index));
-                        }
+                    dot.classList.add('pagination-dot'); // Clasă comună
+                    dot.dataset.index = i;
+                    dot.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        console.log(`Dot clicked for index: ${i}`); // Log when a dot is clicked
+                        goToSlide(i);
                     });
+                    container.appendChild(dot);
                 }
             }
 
-            function showSlide(index) {
-                currentSlideIndex = Math.max(0, Math.min(index, totalSlides - 1)); 
-
-                const targetTransform = isMobile() ? `translateY(-${currentSlideIndex * 100}%)` : `translateX(-${currentSlideIndex * 100}%)`;
-
-                slidesWrapper.classList.remove('no-transition'); 
-                slidesWrapper.style.transform = targetTransform;
-                
-                updatePaginationDots(); 
-            }
-
-            function handleResize() {
-                slidesWrapper.classList.add('no-transition'); 
-                currentSlideIndex = Math.max(0, Math.min(currentSlideIndex, totalSlides - 1)); 
-                slidesWrapper.style.transform = isMobile() ? `translateY(-${currentSlideIndex * 100}%)` : `translateX(-${currentSlideIndex * 100}%)`;
-                void slidesWrapper.offsetHeight; 
-                requestAnimationFrame(() => {
-                    slidesWrapper.classList.remove('no-transition'); 
+            // Funcție pentru a actualiza punctele de paginare
+            function updatePaginationDots() {
+                // Actualizează punctele desktop (dacă sunt vizibile)
+                const dotsDesktop = paginationDotsDesktopContainer.querySelectorAll('.pagination-dot');
+                dotsDesktop.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('bg-blue-600');
+                        dot.classList.remove('bg-gray-400');
+                    } else {
+                        dot.classList.remove('bg-blue-600');
+                        dot.classList.add('bg-gray-400');
+                    }
                 });
-                updatePaginationDots(); 
+
+                // Actualizează punctele mobile (dacă sunt vizibile)
+                const dotsMobile = paginationDotsMobileContainer.querySelectorAll('.pagination-dot');
+                dotsMobile.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('bg-blue-600');
+                        dot.classList.remove('bg-gray-400');
+                    } else {
+                        dot.classList.remove('bg-blue-600');
+                        dot.classList.add('bg-gray-400');
+                    }
+                });
+                console.log(`Paginare actualizată la index: ${currentIndex}`); // Log when pagination dots are updated
             }
 
-            window.addEventListener('resize', handleResize);
+            // Funcție pentru a naviga la un anumit slide
+            function goToSlide(index) {
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
 
-            slidesWrapper.classList.add('no-transition');
-            slidesWrapper.style.transform = isMobile() ? `translateY(-${currentSlideIndex * 100}%)` : `translateX(-${currentSlideIndex * 100}%)`;
-            void slidesWrapper.offsetHeight; 
-            requestAnimationFrame(() => {
-                slidesWrapper.classList.remove('no-transition');
-                updatePaginationDots(); 
+                if (isMobileView()) {
+                    const targetSlide = slides[currentIndex];
+                    if (targetSlide) {
+                        // LOGURI CRITICE PENTRU DEPANARE MOBIL
+                        console.log('--- GO TO SLIDE (MOBILE) ---');
+                        console.log(`Intentie de scroll la slide index: ${currentIndex}`);
+                        console.log(`targetSlide.offsetTop: ${targetSlide.offsetTop}`);
+                        console.log(`slidesWrapper.scrollTop (inainte de scroll): ${slidesWrapper.scrollTop}`);
+                        console.log(`slidesWrapper.scrollHeight: ${slidesWrapper.scrollHeight}`);
+                        console.log(`slidesWrapper.clientHeight: ${slidesWrapper.clientHeight}`);
+
+                        slidesWrapper.scrollTo({
+                            top: targetSlide.offsetTop,
+                            behavior: 'smooth'
+                        });
+
+                        console.log('--- Scroll command issued ---');
+                    } else {
+                        console.warn(`targetSlide is null for index: ${currentIndex}`);
+                    }
+                } else {
+                    // Scroll orizontal pe desktop
+                    const offset = -currentIndex * 100;
+                    slidesWrapper.style.transform = `translateX(${offset}%)`;
+                }
+                updatePaginationDots();
+            }
+
+            // Evenimente pentru butoanele de navigare (Desktop)
+            if (prevButtonDesktop) {
+                prevButtonDesktop.addEventListener('click', () => {
+                    goToSlide(currentIndex - 1);
+                });
+            }
+            if (nextButtonDesktop) {
+                nextButtonDesktop.addEventListener('click', () => {
+                    goToSlide(currentIndex + 1);
+                });
+            }
+
+            // Inițializare la încărcare
+            createPaginationDots(paginationDotsDesktopContainer);
+            createPaginationDots(paginationDotsMobileContainer);
+            goToSlide(0); // Ensure initial state is correct
+
+            // Listener pentru redimensionarea ferestrei
+            window.addEventListener('resize', () => {
+                console.log('Window resized. Resetting slider state.'); // Log resize event
+                slidesWrapper.style.transform = 'translateX(0)';
+                slidesWrapper.scrollTop = 0;
+                currentIndex = 0;
+                goToSlide(0);
+            });
+
+            // Actualizarea indexului slide-ului la scroll (doar pe mobil)
+            slidesWrapper.addEventListener('scroll', () => {
+                if (isMobileView()) {
+                    const scrollY = slidesWrapper.scrollTop;
+                    let closestSlideIndex = 0;
+                    let minDiff = Infinity;
+                    const tolerance = 50; // Tolerance for scroll snap
+
+                    console.log(`Scroll event detected. current scrollY: ${scrollY}`); // Log scroll events
+
+                    slides.forEach((slide, index) => {
+                        const slideTopRelativeToScrollWrapper = slide.offsetTop;
+                        const diff = Math.abs(slideTopRelativeToScrollWrapper - scrollY);
+
+                        console.log(`Slide ${index}: offsetTop=${slideTopRelativeToScrollWrapper}, diff=${diff}`); // Log each slide's position
+
+                        if (diff < minDiff && diff < tolerance) {
+                            minDiff = diff;
+                            closestSlideIndex = index;
+                        }
+                    });
+
+                    if (closestSlideIndex !== currentIndex) {
+                        console.log(`Changing current index from ${currentIndex} to ${closestSlideIndex}`); // Log index change
+                        currentIndex = closestSlideIndex;
+                        updatePaginationDots();
+                    }
+                }
             });
         });
     </script>
