@@ -614,32 +614,31 @@
                 class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
 
             <div id="form-business" class="hidden">
-                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
-                    (Business)</h2>
+                <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk</h2>
                 <form class="space-y-6">
                     <div>
                         <input type="text" placeholder="Your Name"
-                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
                             style="font-family: var(--font-body);">
                     </div>
                     <div>
                         <input type="text" placeholder="Company"
-                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
                             style="font-family: var(--font-body);">
                     </div>
                     <div>
                         <input type="email" placeholder="Your Email Address"
-                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
                             style="font-family: var(--font-body);">
                     </div>
                     <div>
                         <input type="tel" placeholder="Phone (Optional)"
-                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
                             style="font-family: var(--font-body);">
                     </div>
                     <div class="relative">
                         <div id="business-challenge-dropdown-toggle"
-                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+                            class="w-full p-2 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
                             style="font-family: var(--font-body);">
                             <span id="selected-business-challenges" class="text-gray-700">What’s your current
                                 challenge?</span>
@@ -777,8 +776,8 @@
                         </div>
                     </div>
                     <div>
-                        <textarea placeholder="Your Message" rows="5"
-                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                        <textarea placeholder="Your Message" rows="3"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
                             style="border-color: var(--color-accent-brown);"
                             style="font-family: var(--font-body);"></textarea>
                     </div>
@@ -788,7 +787,7 @@
                 </form>
             </div>
 
-            <div id="form-individuals" class="hidden">
+            <!-- <div id="form-individuals" class="hidden">
                 <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
                     (Individuals)</h2>
                 <form class="space-y-6">
@@ -920,7 +919,7 @@
                         class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
                         style="font-family: var(--font-body);">Submit</button>
                 </form>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -965,7 +964,6 @@
             // Funcție pentru a determina dacă suntem pe mobil (bazat pe CSS media query)
             const isMobileView = () => {
                 const isMobile = window.matchMedia('(max-width: 767px)').matches;
-                console.log(`isMobileView: ${isMobile}`); // Log for mobile view detection
                 return isMobile;
             };
 
@@ -978,7 +976,6 @@
                     dot.dataset.index = i;
                     dot.addEventListener('click', (event) => {
                         event.preventDefault();
-                        console.log(`Dot clicked for index: ${i}`); // Log when a dot is clicked
                         goToSlide(i);
                     });
                     container.appendChild(dot);
@@ -1010,7 +1007,6 @@
                         dot.classList.add('bg-gray-400');
                     }
                 });
-                console.log(`Paginare actualizată la index: ${currentIndex}`); // Log when pagination dots are updated
             }
 
             // Funcție pentru a naviga la un anumit slide
@@ -1026,20 +1022,10 @@
                 if (isMobileView()) {
                     const targetSlide = slides[currentIndex];
                     if (targetSlide) {
-                        // LOGURI CRITICE PENTRU DEPANARE MOBIL
-                        console.log('--- GO TO SLIDE (MOBILE) ---');
-                        console.log(`Intentie de scroll la slide index: ${currentIndex}`);
-                        console.log(`targetSlide.offsetTop: ${targetSlide.offsetTop}`);
-                        console.log(`slidesWrapper.scrollTop (inainte de scroll): ${slidesWrapper.scrollTop}`);
-                        console.log(`slidesWrapper.scrollHeight: ${slidesWrapper.scrollHeight}`);
-                        console.log(`slidesWrapper.clientHeight: ${slidesWrapper.clientHeight}`);
-
                         slidesWrapper.scrollTo({
                             top: targetSlide.offsetTop,
                             behavior: 'smooth'
                         });
-
-                        console.log('--- Scroll command issued ---');
                     } else {
                         console.warn(`targetSlide is null for index: ${currentIndex}`);
                     }
@@ -1070,7 +1056,6 @@
 
             // Listener pentru redimensionarea ferestrei
             window.addEventListener('resize', () => {
-                console.log('Window resized. Resetting slider state.'); // Log resize event
                 slidesWrapper.style.transform = 'translateX(0)';
                 slidesWrapper.scrollTop = 0;
                 currentIndex = 0;
@@ -1085,13 +1070,9 @@
                     let minDiff = Infinity;
                     const tolerance = 50; // Tolerance for scroll snap
 
-                    console.log(`Scroll event detected. current scrollY: ${scrollY}`); // Log scroll events
-
                     slides.forEach((slide, index) => {
                         const slideTopRelativeToScrollWrapper = slide.offsetTop;
                         const diff = Math.abs(slideTopRelativeToScrollWrapper - scrollY);
-
-                        console.log(`Slide ${index}: offsetTop=${slideTopRelativeToScrollWrapper}, diff=${diff}`); // Log each slide's position
 
                         if (diff < minDiff && diff < tolerance) {
                             minDiff = diff;
@@ -1100,7 +1081,6 @@
                     });
 
                     if (closestSlideIndex !== currentIndex) {
-                        console.log(`Changing current index from ${currentIndex} to ${closestSlideIndex}`); // Log index change
                         currentIndex = closestSlideIndex;
                         updatePaginationDots();
                     }

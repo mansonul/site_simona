@@ -924,8 +924,16 @@ nav ul li a {
     left: -45px; /* Poziționat în afara slider-container */
 }
 
+#personal-programs-list .left-arrow {
+    top: 225px;
+}
+
 .right-arrow {
     right: -45px; /* Poziționat în afra slider-container */
+}
+
+#personal-programs-list .right-arrow {
+    top: 225px;
 }
 
 /* Paginarea desktop (dreptunghiuri, orizontal) */
