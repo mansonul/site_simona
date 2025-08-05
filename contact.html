@@ -1,273 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Business through people</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">        
-    <link rel="stylesheet" href="./assets/css/style.css">
-        <!-- Favicon links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Android Chrome favicons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
-    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Business Through People</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Android Chrome favicons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+  <style>
+    .hero-section {
+      height: 110vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .left-floating-div-boxx-about-page {
+      background-image: url("images/2.jpg");
+      background-position: center;
+      background-size: cover;
+      inset: auto auto auto 3%;
+      left: 8%;
+      margin-left: 0;
+      max-width: 625px;
+      right: auto;
+      padding: 3rem 4rem;
+      position: absolute;
+      transition: all .2s;
+    }
+  </style>
+
 </head>
 
 <body class="font-sans antialiased text-gray-800">
 
-    <div class="w-full bg-black h-4"></div>
+  <div class="w-full bg-black h-4"></div>
 
-    <header class="bg-white shadow-sm py-4">
-        <div class="container mx-auto px-4 flex flex-col items-center">
-            <a href="index.html" class="mb-4">
-                <img src="./images/logo/logo.png" alt="Logo Business through people" class="h-20 w-auto max-w-full">
-            </a>
+  <header class="bg-white shadow-sm py-4">
+    <div class="container mx-auto px-4 flex flex-col items-center">
+      <a href="index.html" class="mb-4">
+        <img src="./images/logo/logo.png" alt="Logo Business through people" class="h-20 w-auto max-w-full">
+      </a>
 
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">HOME</a></li>
-                    <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">ABOUT</a></li>
-                    <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
-                    <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-                    <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium"
+              style="font-family: var(--font-body);">HOME</a></li>
+          <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium"
+              style="font-family: var(--font-body);">ABOUT</a></li>
+          <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
+              style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
+          <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
+              style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
+          <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
                             style="font-family: var(--font-body);">INSIGHTS</a></li> -->
-                    <li><a href="contact.html" class="text-gray-900 font-bold"
-                            style="font-family: var(--font-body);">CONTACT</a></li>
-                </ul>
-            </nav>
+          <li><a href="contact.html" class="text-gray-900 font-bold" style="font-family: var(--font-body);">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
 
-            <button id="mobile-menu-button" class="md:hidden absolute top-4 right-4 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 pb-4">
-            <ul class="flex flex-col items-center space-y-4">
-                <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">HOME</a></li>
-                <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">ABOUT</a></li>
-                <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
-                <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-                <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">INSIGHTS</a></li> -->
-                <li><a href="contact.html" class="text-gray-900 font-bold py-2 block"
-                        style="font-family: var(--font-body);">CONTACT</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section id="home" class="flex flex-col">
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+1+-+People+Growth'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Growth that starts with people</h2>
-                    <p class="text-xl md:text-2xl mb-8">Because when people grow, everything does.</p>
-                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                        <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Businesses</a>
-                        <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ For Individuals</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+2+-+Purpose+Culture'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Lead with Purpose. Live Your Culture. Deliver Results.</h2>
-                    <a href="business-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+3+-+Personal+Story'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Own your story. Lead yourself. Grow on purpose.</h2>
-                    <a href="personal-grow.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Start Now</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+4+-+People+Culture+Growth'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4">People First. Culture Forward. Accelerate Growth.</h2>
-                    <a href="about.html" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Learn More</a>
-                </div>
-            </div>
-
-            <div class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden p-8"
-                 style="background-image: url('https://via.placeholder.com/1920x1080?text=Banner+5+-+Contact'); background-size: cover; background-position: center;">
-                <div class="relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-8">Contact</h2>
-                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                        <button id="btn-contact-business" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About Businesses</button>
-                        <button id="btn-contact-individuals" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">→ Let’s Talk About You</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact-forms-container" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div class="bg-white rounded-lg p-8 max-w-xl w-full relative">
-                <button id="close-contact-forms" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
-                
-                <div id="form-business" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Business)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="business-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="business-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Culture misalignment">Culture misalignment</option>
-                                <option value="Low engagement">Low engagement</option>
-                                <option value="Leadership gaps">Leadership gaps</option>
-                                <option value="Team conflict">Team conflict</option>
-                                <option value="Change fatigue">Change fatigue</option>
-                                <option value="Poor collaboration">Poor collaboration</option>
-                                <option value="Unclear roles">Unclear roles</option>
-                                <option value="Communication issues">Communication issues</option>
-                                <option value="Resistance to change">Resistance to change</option>
-                                <option value="Capability gaps">Capability gaps</option>
-                                <option value="Underperformance">Underperformance</option>
-                                <option value="New management">New management</option>
-                                <option value="Scaling challenges">Scaling challenges</option>
-                                <option value="Strategy execution">Strategy execution</option>
-                                <option value="Low trust">Low trust</option>
-                                <option value="High turnover">High turnover</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
-                </div>
-
-                <div id="form-individuals" class="hidden">
-                    <h2 class="text-4xl font-bold mb-8 text-center">Let’s talk (Individual)</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Numele tău" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Companie (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Adresa ta de email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Telefon (Opțional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="individual-challenge" class="block text-left text-gray-700 text-sm font-medium mb-2">What’s your current challenge?</label>
-                            <select id="individual-challenge" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Selectează o provocare</option>
-                                <option value="Overgiving">Overgiving</option>
-                                <option value="Avoidant patterns">Avoidant patterns</option>
-                                <option value="Poor communication">Poor communication</option>
-                                <option value="Feeling disconnected">Feeling disconnected</option>
-                                <option value="Conflict in relationships">Conflict in relationships</option>
-                                <option value="People-pleasing">People-pleasing</option>
-                                <option value="Midlife shift">Midlife shift</option>
-                                <option value="Starting over">Starting over</option>
-                                <option value="Career change">Career change</option>
-                                <option value="Pursuing meaning">Pursuing meaning</option>
-                                <option value="Living on autopilot">Living on autopilot</option>
-                                <option value="No time for others">No time for others</option>
-                                <option value="No time for self">No time for self</option>
-                                <option value="Longing connection">Longing connection</option>
-                                <option value="Boundaries">Boundaries</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition duration-300">Trimite Mesajul</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-section-placeholder" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina About.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">about.html</code>.</p>
-        </section>
-        
-        <section id="business-grow-section-placeholder" class="py-20 bg-white text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Business Grow.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">business-grow.html</code>.</p>
-        </section>
-
-        <section id="personal-grow-section-placeholder" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Personal Grow.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">personal-grow.html</code>.</p>
-        </section>
-
-        <section id="insights-section-placeholder" class="py-20 bg-white text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Insights.</h2>
-            <p class="mt-4">Conținutul real va fi în fișierul <code class="bg-gray-200 p-1 rounded">insights.html</code>.</p>
-        </section>
-
-        <section id="contact-section-fallback" class="py-20 bg-gray-100 text-center">
-            <h2 class="text-3xl font-bold">Aceasta este o secțiune placeholder pentru Pagina Contact.</h2>
-            <p class="mt-4">Conținutul real (dacă nu e gestionat integral de pop-up-uri) va fi în fișierul <code class="bg-gray-200 p-1 rounded">contact.html</code>.</p>
-        </section>
-
-    </main>
-
-    <footer class="text-white py-10" style="background-color: var(--color-background-desktop);">
-    <div class="container mx-auto px-4 text-center">
-        <div class="mb-6">
-            <img src="./images/thumbnail.svg" alt="Business through people Variant Logo" class="h-20 mx-auto">
-        </div>
-        <p class="text-lg mb-4">&copy; 2025 Business through people. All rights reserved.</p>
-        <div class="flex justify-center space-x-6">
-            <!-- Facebook Icon -->
-            <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
-                <img src="./images/logo/icons8-facebook-50.svg" alt="Facebook Icon" class="w-8 h-8">
-            </a>
-            <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
-                <img src="./images/logo/icons8-instagram-50.svg" alt="Instagram Icon" class="w-8 h-8">
-            </a>
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300">
-                <img src="./images/logo/icons8-linkedin-50.svg" alt="LinkedIn Icon" class="w-8 h-8">
-            </a>
-        </div>
+      <button id="mobile-menu-button" class="md:hidden absolute top-4 right-4 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+          </path>
+        </svg>
+      </button>
     </div>
-</footer>
 
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script> </body>
+    <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 pb-4">
+      <ul class="flex flex-col items-center space-y-4">
+        <li><a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+            style="font-family: var(--font-body);">HOME</a></li>
+        <li><a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+            style="font-family: var(--font-body);">ABOUT</a></li>
+        <li><a href="business-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+            style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
+        <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+            style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
+        <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
+                        style="font-family: var(--font-body);">INSIGHTS</a></li> -->
+        <li><a href="contact.html" class="text-gray-900 font-bold py-2 block"
+            style="font-family: var(--font-body);">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="w-full h-8"></div>
+
+    <div class="container mx-auto p-4">
+
+      <div class="flex mb-8">
+        <div class="w-1/2 flex justify-center items-center">
+          <div class="w-4/5 bg-white p-6 relative z-20 -mb-24"
+            style="background-image: url(images/2.jpg); background-size: cover; background-position: center;">
+            <h2 class="text-xl font-semibold mb-2 text-white">Contact Us</h2>
+
+            <div>
+              <form action="#" method="POST" class="space-y-4">
+                <div>
+                  <label for="topic" class="block text-sm font-medium text-white">What are you looking
+                    for
+                    more information on?</label>
+                  <select id="topic" name="topic"
+                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                    <option>Consulting Services</option>
+                    <option>Careers</option>
+                    <option>General</option>
+                  </select>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="first-name" class="block text-sm font-medium text-white">First
+                      Name</label>
+                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  </div>
+                  <div>
+                    <label for="last-name" class="block text-sm font-medium text-white">Last
+                      Name</label>
+                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-white">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email"
+                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-white">Message</label>
+                  <textarea id="message" name="message" rows="4"
+                    class="mt-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <p class="text-sm text-gray-200">CAPTCHA here</p>
+                  <button type="submit"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2 flex items-center ml-8 pl-3">
+          <div class="w-full bg-white p-6">
+            <h2 class="text-4xl mb-4" style="font-family: var(--font-heading); color: var(--color-accent-brown);">Get in
+              Touch.</h2>
+            <p class="text-2xl" style="color: var(--color-background-desktop); font-family: var(--font-body);">
+              Need to get in touch with an expert about your next transformation? Looking to get your
+              career
+              started at Daggerwing Group? Have a question about change? Get in touch.
+            </p>
+
+            <div class="flex justify-center space-x-6 mt-5 mb-4">
+              <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer"
+                class="hover:opacity-75 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
+                  style="fill:var(--color-accent-brown);">
+                  <path
+                    d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer"
+                class="hover:opacity-75 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
+                  style="fill:var(--color-accent-brown);">
+                  <path
+                    d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer"
+                class="hover:opacity-75 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
+                  style="fill:var(--color-accent-brown);">
+                  <path
+                    d="M 41,4 H 9 C 6.24,4,4,6.24,4,9 v 32 c 0,2.76,2.24,5,5,5 h 32 c 2.76,0,5-2.24,5-5 V 9 C 46,6.24,43.76,4,41,4 z M 17,20 v 19 h -6 V 20 H 17 z M 11,14.47 c 0-1.4,1.2-2.47,3-2.47 s 2.93,1.07,3,2.47 c 0,1.4-1.12,2.53-3,2.53 C 12.2,17,11,15.87,11,14.47 z M 39,39 h -6 c 0,0,0-9.26,0-10 c 0-2-1-4-3.5-4.04 h -0.08 C 27,24.96,26,27.02,26,29 c 0,0.91,0,10,0,10 h -6 V 20 h 6 v 2.56 c 0,0,1.93-2.56,5.81-2.56 c 3.97,0,7.19,2.73,7.19,8.26 V 39 z" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="relative bg-gray-300 h-96 overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center opacity-50"
+        style="background-image: url('images/Simona-Istrate.webp');">
+      </div>
+
+      <div class="container mx-auto flex h-full items-center justify-end p-4">
+        <div class="w-1/2 bg-white p-6 z-10">
+          <h2 class="text-3xl mb-2" style="font-family: var(--font-heading); color: var(--color-accent-brown);">We’re
+            proud to be the people who do change
+            right.</h2>
+          <p class="text-xl" style="font-family: var(--font-body);">
+            Our backgrounds include organizational and behavioral psychology, corporate strategy, HR
+            consulting, marketing, culture transformation, creative, analytics and employee experience
+            design.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-white py-8" style="background-color: var(--color-background-desktop);">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-lg mb-4">Follow me</p>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.facebook.com/share/1AwSF6gAwM/" target="_blank" rel="noopener noreferrer"
+          class="hover:opacity-75 transition duration-300">
+          <img src="./images/logo/icons8-facebook-50.svg" alt="Facebook Icon" class="w-8 h-8">
+        </a>
+        <a href="https://www.instagram.com/simonaaistrate" target="_blank" rel="noopener noreferrer"
+          class="hover:opacity-75 transition duration-300">
+          <img src="./images/logo/icons8-instagram-50.svg" alt="Instagram Icon" class="w-8 h-8">
+        </a>
+        <a href="https://www.linkedin.com/in/simona-istrate-973bb82" target="_blank" rel="noopener noreferrer"
+          class="hover:opacity-75 transition duration-300">
+          <img src="./images/logo/icons8-linkedin-50.svg" alt="LinkedIn Icon" class="w-8 h-8">
+        </a>
+      </div>
+      <p class="text-lg">2025 &copy; Business Through People.<br />All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
