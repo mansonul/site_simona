@@ -120,7 +120,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding: 8rem;
+    /* padding: 8rem; */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -192,7 +192,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding: 8rem;
+    /* padding: 8rem; */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -268,7 +268,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding: 8rem;
+    /* padding: 8rem; */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -371,9 +371,10 @@
 
     /* Buttons on mobile - REintroduce border */
     .hero-banner-main .banner-button-wrapper {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
-        width: 100%;
     }
 
     .banner-button {
@@ -416,8 +417,8 @@
         width: 100%;
         padding: 1.5rem;
         background-color: #f9fafb;
-        border-radius: 0.5rem;
-        border-bottom: 4px solid #836957;
+        /* border-radius: 0.5rem;
+        border-bottom: 4px solid #836957; */
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         margin-bottom: 1rem;
         /* Space between cards on mobile */
@@ -575,26 +576,20 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Stiluri pentru a imita imaginea */
 .card-image-style {
-    /* Eliminam imaginile de fundal specifice cardurilor din sectiunea originala, conform imaginii*/
     background-image: none !important;
     background-color: white !important;
-    /* Setam fundalul cardului alb */
     border-color: transparent !important;
-    /* Eliminam bordura de sus cu accent */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     min-height: 280px;
 }
 
 .card-image-style h4 {
     color: var(--color-accent-brown) !important;
-    /* Culoarea titlului cardului */
 }
 
 .card-image-style div p {
     color: #333 !important;
-    /* Culoarea textului de pe card */
 }
 
 /* Stil pentru titlul "Our courses" */
@@ -925,7 +920,7 @@ nav ul li a {
 }
 
 #personal-programs-list .left-arrow {
-    top: 220px;
+    top: 235px;
 }
 
 .right-arrow {
@@ -933,7 +928,7 @@ nav ul li a {
 }
 
 #personal-programs-list .right-arrow {
-    top: 220px;
+    top: 235px;
 }
 
 /* Paginarea desktop (dreptunghiuri, orizontal) */
@@ -966,10 +961,22 @@ nav ul li a {
 /* --- Media Query pentru MOBILE (max-width: 767px) --- */
 @media (max-width: 767px) {
 
+    .card-image-style {
+        min-height: 220px;
+    }
+
     /* Mobile Layout Wrapper: Aranjează sliderul și paginarea pe aceeași linie */
     .mobile-layout-wrapper {
         display: flex;
         flex-direction: row;
+        /* Sliderul și paginarea una lângă alta */
+        align-items: center;
+        /* Centrează vertical paginarea față de slider */
+    }
+
+    .mobile-layout-wrapper-pg {
+        display: flex;
+        flex-direction: column;
         /* Sliderul și paginarea una lângă alta */
         align-items: center;
         /* Centrează vertical paginarea față de slider */
@@ -995,11 +1002,12 @@ nav ul li a {
 
     .slider-content-wrapper {
         /* PĂSTRĂM ASTA, VA FI UN WRAPPER CARE ASCUNDE SCROLL-UL ALUI SLIDES-WRAPPER DE JOS */
-        overflow-x: hidden; /* Ascunde scroll-ul orizontal, e ok să rămână */
-        overflow-y: hidden; /* NU MAI E SCROLL AICI! Se mută pe slides-wrapper */
-        height: 644px; /* Rămâne cu înălțime fixă pentru a defini zona vizibilă a sliderului */
+        overflow-x: hidden;
+        overflow-y: hidden;
+        /* height: 644px; */
+        height: 730px;
         margin-bottom: 0;
-        padding-right: 0px; /* Păstrăm la 0px pentru a apropia paginarea */
+        padding-right: 0px;
     }
 
     .slides-wrapper {
