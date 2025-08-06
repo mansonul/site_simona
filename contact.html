@@ -111,56 +111,68 @@
       <div class="flex mb-8">
         <div class="w-1/2 flex justify-center items-center">
           <div class="w-4/5 bg-white p-6 relative z-20 -mb-24"
-            style="background-image: url(images/2.jpg); background-size: cover; background-position: center;">
-            <h2 class="text-xl font-semibold mb-2 text-white">Contact Us</h2>
-
+            style="background-image: url(images/2.jpg); background-size: cover; background-position: center; background-color: rgba(0, 0, 0, 0.2);">
             <div>
-              <form action="#" method="POST" class="space-y-4">
-                <div>
-                  <label for="topic" class="block text-sm font-medium text-white">What are you looking
-                    for
-                    more information on?</label>
-                  <select id="topic" name="topic"
-                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                    <option>Consulting Services</option>
-                    <option>Careers</option>
-                    <option>General</option>
-                  </select>
+              <form action="#" method="POST" class="space-y-6">
+
+                <h3 class="mb-2 text-lg text-center font-semibold" style="font-family: var(--font-body);">What are you
+                  looking for more information on?</h3>
+                <div class="relative">
+                  <button id="topic-dropdown-button" type="button"
+                    class="mt-1 w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none"
+                    style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+                    <span id="selected-topic-text" class="text-gray-700">Training and consultancy programs</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                  <div id="topic-options"
+                    class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                    <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                      data-value="Training and consultancy programs">
+                      <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                      <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Training and
+                        consultancy programs</span>
+                    </div>
+                    <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                      data-value="Workshops for personal growth">
+                      <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                      <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Workshops for
+                        personal growth</span>
+                    </div>
+                    <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center" data-value="Others">
+                      <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                      <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Others</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label for="first-name" class="block text-sm font-medium text-white">First
-                      Name</label>
-                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <input type="text" placeholder="First Name" class="w-full p-2 border rounded-md focus:outline-none"
+                      style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
                   </div>
                   <div>
-                    <label for="last-name" class="block text-sm font-medium text-white">Last
-                      Name</label>
-                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <input type="text" placeholder="Last Name" class="w-full p-2 border rounded-md focus:outline-none"
+                      style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
                   </div>
                 </div>
 
                 <div>
-                  <label for="email" class="block text-sm font-medium text-white">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email"
-                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  <input type="email" placeholder="Your Email Address"
+                    class="w-full p-2 border rounded-md focus:outline-none"
+                    style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
                 </div>
 
                 <div>
-                  <label for="message" class="block text-sm font-medium text-white">Message</label>
-                  <textarea id="message" name="message" rows="4"
-                    class="mt-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                  <textarea placeholder="Your Message" rows="4" class="w-full p-2 border rounded-md focus:outline-none"
+                    style="border-color: var(--color-accent-brown); font-family: var(--font-body);"></textarea>
                 </div>
-
-                <div class="flex items-center justify-between">
-                  <p class="text-sm text-gray-200">CAPTCHA here</p>
+                <div class="flex justify-center">
                   <button type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Submit
-                  </button>
+                    class="bg-gray-900 text-white p-2 rounded-md text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                    style="font-family: var(--font-body);">Submit</button>
                 </div>
               </form>
             </div>
@@ -169,12 +181,13 @@
 
         <div class="w-1/2 flex items-center ml-8 pl-3">
           <div class="w-full bg-white p-6">
-            <h2 class="text-4xl mb-4" style="font-family: var(--font-heading); color: var(--color-accent-brown);">Get in
-              Touch.</h2>
-            <p class="text-2xl" style="color: var(--color-background-desktop); font-family: var(--font-body);">
-              Need to get in touch with an expert about your next transformation? Looking to get your
-              career
-              started at Daggerwing Group? Have a question about change? Get in touch.
+            <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4"
+              style="font-family: var(--font-heading); color: var(--color-accent-brown) !important;">
+              Let’s talk about you<br>or your business
+            </h2>
+            <p class="text-2xl text-center"
+              style="color: var(--color-background-desktop); font-family: var(--font-body);">
+              Contact us<br>+40728200008
             </p>
 
             <div class="flex justify-center space-x-6 mt-5 mb-4">
@@ -217,13 +230,11 @@
 
       <div class="container mx-auto flex h-full items-center justify-end p-4">
         <div class="w-1/2 bg-white p-6 z-10">
-          <h2 class="text-3xl mb-2" style="font-family: var(--font-heading); color: var(--color-accent-brown);">We’re
-            proud to be the people who do change
-            right.</h2>
+          <h2 class="text-4xl md:text-5xl font-semibold mb-2"
+            style="font-family: var(--font-heading); color: var(--color-accent-brown);">We listen to our clients.</h2>
           <p class="text-xl" style="font-family: var(--font-body);">
-            Our backgrounds include organizational and behavioral psychology, corporate strategy, HR
-            consulting, marketing, culture transformation, creative, analytics and employee experience
-            design.
+            Our clients say what differentiates this program is real change driven by understanding why and how, not by
+            obligation.
           </p>
         </div>
       </div>
@@ -253,6 +264,58 @@
   </footer>
 
   <script src="./assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownButton = document.getElementById('topic-dropdown-button');
+      const dropdownOptions = document.getElementById('topic-options');
+      const selectedTextSpan = document.getElementById('selected-topic-text');
+      const dropdownArrow = dropdownButton.querySelector('svg');
+      const options = dropdownOptions.querySelectorAll('[data-value]');
+
+      function updateSelection(selectedValue) {
+        options.forEach(option => {
+          // Ascunde bifele și elimină fundalul gri de pe toate opțiunile
+          option.querySelector('.selected-checkmark').classList.add('hidden');
+          option.classList.remove('bg-gray-100');
+        });
+
+        // Afișează bifa și adaugă fundalul gri pentru opțiunea selectată
+        const selectedOption = document.querySelector(`[data-value="${selectedValue}"]`);
+        if (selectedOption) {
+          selectedOption.querySelector('.selected-checkmark').classList.remove('hidden');
+          selectedOption.classList.add('bg-gray-100');
+          selectedTextSpan.textContent = selectedValue;
+        }
+
+        dropdownOptions.classList.add('hidden');
+        dropdownArrow.classList.remove('rotate-180');
+      }
+
+      dropdownButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdownOptions.classList.toggle('hidden');
+        dropdownArrow.classList.toggle('rotate-180');
+      });
+
+      options.forEach(option => {
+        option.addEventListener('click', () => {
+          const value = option.getAttribute('data-value');
+          updateSelection(value);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!dropdownButton.contains(event.target) && !dropdownOptions.contains(event.target)) {
+          dropdownOptions.classList.add('hidden');
+          dropdownArrow.classList.remove('rotate-180');
+        }
+      });
+
+      // Setarea selecției inițiale (prima opțiune)
+      const initialValue = options[0].getAttribute('data-value');
+      updateSelection(initialValue);
+    });
+  </script>
 </body>
 
 </html>
