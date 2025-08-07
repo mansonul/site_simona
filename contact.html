@@ -12,7 +12,6 @@
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Favicon links -->
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -20,7 +19,6 @@
   <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <!-- Android Chrome favicons -->
   <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
   <link rel="shortcut icon" href="./images/favicon/favicon.ico">
@@ -70,8 +68,6 @@
               style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
           <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
               style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-          <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">INSIGHTS</a></li> -->
           <li><a href="contact.html" class="text-gray-900 font-bold" style="font-family: var(--font-body);">CONTACT</a>
           </li>
         </ul>
@@ -95,8 +91,6 @@
             style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
         <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
             style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-        <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">INSIGHTS</a></li> -->
         <li><a href="contact.html" class="text-gray-900 font-bold py-2 block"
             style="font-family: var(--font-body);">CONTACT</a></li>
       </ul>
@@ -108,9 +102,10 @@
 
     <div class="container mx-auto p-4">
 
-      <div class="flex mb-8">
-        <div class="w-1/2 flex justify-center items-center">
-          <div class="w-4/5 bg-white p-6 relative z-20 -mb-24"
+      <div class="flex flex-col md:flex-row mb-8">
+
+        <div class="w-full md:w-1/2 flex justify-center items-center">
+          <div class="w-full md:w-4/5 bg-white p-6 relative z-20 md:-mb-24"
             style="background-color: var(--color-background-desktop);">
             <div>
               <form action="#" method="POST" class="space-y-6">
@@ -121,7 +116,8 @@
                   <button id="topic-dropdown-button" type="button"
                     class="mt-1 w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none"
                     style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
-                    <span id="selected-topic-text" class="text-gray-700">Training and consultancy programs</span>
+                    <span id="selected-topic-text" class="text-gray-700">Training and consultancy
+                      programs</span>
                     <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none"
                       stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -179,7 +175,7 @@
           </div>
         </div>
 
-        <div class="w-1/2 flex items-center ml-8 pl-3">
+        <div class="w-full md:w-1/2 flex items-center mt-8 md:mt-0 md:ml-8 md:pl-3">
           <div class="w-full bg-white p-6">
             <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4"
               style="font-family: var(--font-heading); color: var(--color-accent-brown) !important;">
@@ -220,27 +216,30 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="relative bg-gray-300 h-96 overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center opacity-50"
-        style="background-image: url('images/Simona-Istrate.webp');">
-      </div>
-
-      <div class="container mx-auto flex h-full items-center justify-end p-4">
-        <div class="w-1/2 bg-white p-6 z-10">
-          <h2 class="text-4xl md:text-5xl font-semibold mb-2"
-            style="font-family: var(--font-heading); color: var(--color-accent-brown);">We listen to our clients.</h2>
-          <p class="text-xl" style="font-family: var(--font-body);">
-            Our clients say what differentiates this program is real change driven by understanding why and how, not by
-            obligation.
-          </p>
-        </div>
-      </div>
-    </div>
 
   </main>
+
+  <section>
+    <div class="relative bg-[#71a19f] h-96 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-top opacity-50"
+          style="background-image: url('images/Simona-Istrate.webp');">
+        </div>
+
+        <div class="flex h-full items-end justify-end p-4">
+          <div class="w-full md:w-1/2 bg-white p-2 pb-4 md:p-6 z-10">
+            <h2 class="text-4xl md:text-5xl font-semibold mb-2"
+              style="font-family: var(--font-heading); color: var(--color-accent-brown);">We listen to our
+              clients.</h2>
+            <p class="text-xl" style="font-family: var(--font-body);">
+              Our clients say what differentiates this program is real change driven by understanding why
+              and how, not by
+              obligation.
+            </p>
+          </div>
+        </div>
+
+      </div>
+  </section>
 
   <footer class="text-white py-8" style="background-color: var(--color-background-desktop);">
     <div class="container mx-auto px-4 text-center">
