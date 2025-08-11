@@ -430,7 +430,7 @@
 
             <div id="form-business" class="hidden">
                 <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk</h2>
-                <form action="https://formspree.io/f/xyzpbenb" method="POST" class="space-y-6">
+                <!-- <form action="https://formspree.io/f/xyzpbenb" method="POST" class="space-y-6">
                     <div>
                         <input type="text" placeholder="Your Name"
                             class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
@@ -599,7 +599,174 @@
                     <button type="submit"
                         class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
                         style="font-family: var(--font-body);">Submit</button>
-                </form>
+                </form> -->
+                <form action="https://formspree.io/f/xyzpbenb" method="POST" class="space-y-6">
+    <div>
+        <input type="text" placeholder="Your Name" name="name"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+            style="font-family: var(--font-body);">
+    </div>
+    <div>
+        <input type="text" placeholder="Company" name="company"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+            style="font-family: var(--font-body);">
+    </div>
+    <div>
+        <input type="email" placeholder="Your Email Address" name="email"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+            style="font-family: var(--font-body);">
+    </div>
+    <div>
+        <input type="tel" placeholder="Phone (Optional)" name="phone"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+            style="font-family: var(--font-body);">
+    </div>
+    <div class="relative">
+        <div id="business-challenge-dropdown-toggle"
+            class="w-full p-2 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+            style="font-family: var(--font-body);">
+            <span id="selected-business-challenges" class="text-gray-700">What’s your current challenge?</span>
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div id="business-challenge-options"
+            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-culture-misalignment" value="Culture misalignment" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-culture-misalignment" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Culture misalignment</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-low-engagement" value="Low engagement" name="challenge[]" class="mr-2">
+                <label for="bc-low-engagement" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Low engagement</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-leadership-gaps" value="Leadership gaps" name="challenge[]" class="mr-2">
+                <label for="bc-leadership-gaps" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Leadership gaps</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-team-conflict" value="Team conflict" name="challenge[]" class="mr-2">
+                <label for="bc-team-conflict" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Team conflict</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-lack-of-innovation" value="Lack of innovation" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-lack-of-innovation" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Lack of innovation</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-poor-communication" value="Poor communication" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-poor-communication" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Poor communication</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-high-turnover" value="High turnover" name="challenge[]" class="mr-2">
+                <label for="bc-high-turnover" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">High turnover</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-resistance-to-change" value="Resistance to change" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-resistance-to-change" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Resistance to change</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-unclear-strategy" value="Unclear strategy" name="challenge[]" class="mr-2">
+                <label for="bc-unclear-strategy" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Unclear strategy</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-performance-issues" value="Performance issues" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-performance-issues" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Performance issues</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-lack-of-accountability" value="Lack of accountability" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-lack-of-accountability" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Lack of accountability</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-poor-decision-making" value="Poor decision-making" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-poor-decision-making" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Poor decision-making</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-ineffective-meetings" value="Ineffective meetings" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-ineffective-meetings" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Ineffective meetings</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-unaligned-goals" value="Unaligned goals" name="challenge[]" class="mr-2">
+                <label for="bc-unaligned-goals" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Unaligned goals</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-lack-of-clear-roles" value="Lack of clear roles" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-lack-of-clear-roles" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Lack of clear roles</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-insufficient-feedback" value="Insufficient feedback" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-insufficient-feedback" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Insufficient feedback</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-talent-retention" value="Talent retention" name="challenge[]" class="mr-2">
+                <label for="bc-talent-retention" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Talent retention</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-training-development" value="Training & Development" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-training-development" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Training & Development</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-post-merger-integration" value="Post-merger integration" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-post-merger-integration" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Post-merger integration</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-succession-planning" value="Succession planning" name="challenge[]"
+                    class="mr-2">
+                <label for="bc-succession-planning" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Succession planning</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-work-life-balance" value="Work-life balance" name="challenge[]" class="mr-2">
+                <label for="bc-work-life-balance" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Work-life balance</label>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                <input type="checkbox" id="bc-burnout" value="Burnout" name="challenge[]" class="mr-2">
+                <label for="bc-burnout" class="flex-grow cursor-pointer"
+                    style="font-family: var(--font-body);">Burnout</label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <textarea placeholder="Your Message" name="message" rows="3"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            style="border-color: var(--color-accent-brown); font-family: var(--font-body);"></textarea>
+    </div>
+    <button type="submit"
+        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+        style="font-family: var(--font-body);">Submit</button>
+</form>
             </div>
 
             <!-- <div id="form-individuals" class="hidden">
