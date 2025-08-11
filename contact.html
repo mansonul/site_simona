@@ -108,7 +108,7 @@
           <div class="w-full md:w-4/5 bg-white p-6 relative z-20 md:-mb-24"
             style="background-color: var(--color-background-desktop);">
             <div>
-              <form action="https://formspree.io/f/movlpekb" method="POST" class="space-y-6">
+              <!-- <form action="https://formspree.io/f/movlpekb" method="POST" class="space-y-6">
 
                 <h3 class="mb-2 text-lg text-center font-semibold text-white">What are you
                   looking for more information on?</h3>
@@ -170,7 +170,77 @@
                     class="bg-gray-900 text-white p-2 rounded-md text-lg font-semibold hover:bg-gray-700 transition duration-300"
                     style="font-family: var(--font-body);">Submit</button>
                 </div>
-              </form>
+              </form> -->
+              <form action="https://formspree.io/f/movlpekb" method="POST" class="space-y-6">
+
+    <h3 class="mb-2 text-lg text-center font-semibold text-white">What are you looking for more information on?</h3>
+    <div class="relative">
+        <select name="topic" id="topic-select" class="hidden">
+            <option value="Training and consultancy programs" selected>Training and consultancy programs</option>
+            <option value="Workshops for personal growth">Workshops for personal growth</option>
+            <option value="Others">Others</option>
+        </select>
+        
+        <button id="topic-dropdown-button" type="button"
+            class="mt-1 w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none"
+            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+            <span id="selected-topic-text" class="text-gray-700">Training and consultancy programs</span>
+            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div id="topic-options"
+            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                data-value="Training and consultancy programs">
+                <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Training and
+                    consultancy programs</span>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                data-value="Workshops for personal growth">
+                <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Workshops for
+                    personal growth</span>
+            </div>
+            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center" data-value="Others">
+                <span class="selected-checkmark text-blue-500 mr-2 hidden">✓</span>
+                <span class="flex-grow cursor-pointer" style="font-family: var(--font-body);">Others</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+            <input type="text" placeholder="First Name" name="first-name"
+                class="w-full p-2 border rounded-md focus:outline-none"
+                style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+        </div>
+        <div>
+            <input type="text" placeholder="Last Name" name="last-name"
+                class="w-full p-2 border rounded-md focus:outline-none"
+                style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+        </div>
+    </div>
+
+    <div>
+        <input type="email" placeholder="Your Email Address" name="email"
+            class="w-full p-2 border rounded-md focus:outline-none"
+            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+    </div>
+
+    <div>
+        <textarea placeholder="Your Message" name="message" rows="4"
+            class="w-full p-2 border rounded-md focus:outline-none"
+            style="border-color: var(--color-accent-brown); font-family: var(--font-body);"></textarea>
+    </div>
+    <div class="flex justify-center">
+        <button type="submit"
+            class="bg-gray-900 text-white p-2 rounded-md text-lg font-semibold hover:bg-gray-700 transition duration-300"
+            style="font-family: var(--font-body);">Submit</button>
+    </div>
+</form>
             </div>
           </div>
         </div>
