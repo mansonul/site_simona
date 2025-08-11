@@ -461,19 +461,19 @@
             <div id="form-individuals" class="hidden">
                 <h2 class="text-4xl font-bold mb-8 text-center" style="font-family: var(--font-heading);">Let’s talk
                     (Individuals)</h2>
-                <form action="https://formspree.io/f/xzzvkejy" method="POST" class="space-y-6">
+                <!-- <form action="https://formspree.io/f/xzzvkejy" method="POST" class="space-y-6">
                     <div>
-                        <input type="text" placeholder="Your Name"
+                        <input type="text" placeholder="Your Name" name="name" required
                             class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
                             style="border-color: var(--color-accent-brown);" style="font-family: var(--font-body);">
                     </div>
                     <div>
-                        <input type="email" placeholder="Your Email Address"
+                        <input type="email" placeholder="Your Email Address" name="email" required
                             class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
                             style="border-color: var(--color-accent-brown);" style="font-family: var(--font-body);">
                     </div>
                     <div>
-                        <input type="tel" placeholder="Phone (Optional)"
+                        <input type="tel" placeholder="Phone (Optional)" name="telephone"
                             class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
                             style="border-color: var(--color-accent-brown);" style="font-family: var(--font-body);">
                     </div>
@@ -585,6 +585,143 @@
                             class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
                             style="border-color: var(--color-accent-brown);"
                             style="font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
+                        style="font-family: var(--font-body);">Submit</button>
+                </form> -->
+                <form action="https://formspree.io/f/xzzvkejy" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name" name="name" required
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email Address" name="email" required
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone (Optional)" name="telephone"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+                    </div>
+                    <div class="relative">
+                        <div id="individual-challenge-dropdown-toggle"
+                            class="w-full p-4 border border-gray-300 rounded-lg cursor-pointer flex justify-between items-center bg-white focus:outline-none focus:ring-2"
+                            style="border-color: var(--color-accent-brown); font-family: var(--font-body);">
+                            <span id="selected-individual-challenges" class="text-gray-700">What’s your current
+                                challenge?</span>
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div id="individual-challenge-options"
+                            class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg max-h-60 overflow-y-auto">
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-career-transition" value="Career transition"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-career-transition" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Career transition</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-leadership-development" value="Leadership development"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-leadership-development" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Leadership development</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-communication-skills" value="Communication skills"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-communication-skills" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Communication skills</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-conflict-resolution" value="Conflict resolution"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-conflict-resolution" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Conflict resolution</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-stress-management" value="Stress management"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-stress-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Stress management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-personal-branding" value="Personal branding"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-personal-branding" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Personal branding</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-public-speaking" value="Public speaking"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-public-speaking" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Public speaking</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-time-management" value="Time management"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-time-management" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Time management</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-goal-setting" value="Goal setting" name="challenge[]"
+                                    class="mr-2">
+                                <label for="ic-goal-setting" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Goal setting</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-decision-making" value="Decision-making"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-decision-making" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Decision-making</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-confidence-building" value="Confidence building"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-confidence-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Confidence building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-work-life-balance" value="Work-life balance"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-work-life-balance" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Work-life balance</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-burnout-prevention" value="Burnout prevention"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-burnout-prevention" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Burnout prevention</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-resilience-building" value="Resilience building"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-resilience-building" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Resilience building</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-adaptability" value="Adaptability" name="challenge[]"
+                                    class="mr-2">
+                                <label for="ic-adaptability" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Adaptability</label>
+                            </div>
+                            <div class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
+                                <input type="checkbox" id="ic-emotional-intelligence" value="Emotional Intelligence"
+                                    name="challenge[]" class="mr-2">
+                                <label for="ic-emotional-intelligence" class="flex-grow cursor-pointer"
+                                    style="font-family: var(--font-body);">Emotional Intelligence</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" name="message" rows="5"
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                            style="border-color: var(--color-accent-brown); font-family: var(--font-body);"></textarea>
                     </div>
                     <button type="submit"
                         class="w-full bg-gray-900 text-white p-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition duration-300"
