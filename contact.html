@@ -231,7 +231,7 @@
   <section>
     <div class="relative bg-[#71a19f] h-96 overflow-hidden">
       <div class="absolute inset-0 bg-cover bg-top opacity-50"
-        style="background-image: url('images/Simona-Istrate.webp');">
+        style="background-image: url('images/contact.png');">
       </div>
 
       <div class="flex h-full items-end md:items-center justify-end p-4">
@@ -306,11 +306,11 @@
       });
 
       options.forEach(option => {
-        option.addEventListener('click', () => {
-          const value = option.getAttribute('data-value');
-          updateSelection(value);
+          option.addEventListener('click', () => {
+            const value = option.getAttribute('data-value');
+            updateSelection(value);
+          });
         });
-      });
 
       document.addEventListener('click', (event) => {
         if (!dropdownButton.contains(event.target) && !dropdownOptions.contains(event.target)) {

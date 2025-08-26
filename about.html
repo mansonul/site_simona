@@ -26,22 +26,44 @@
     <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
     <link rel="shortcut icon" href="./images/favicon/favicon.ico">
     <style>
-        .hero-section {
+        /* .hero-section {
             height: 110vh;
-            /* Full viewport height */
             display: flex;
             align-items: center;
             justify-content: center;
-            /* text-align: center; */
             color: white;
             background-image: url("images/Simona-Istrate.webp");
-            /* Placeholder image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            /* This is the key for the fixed background effect */
+        } */
+        .hero-section {
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            /* Imaginea de fundal implicită pentru desktop */
+            background-image: url("images/about_desktop.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
+        /* Media query pentru dispozitive mobile */
+        @media (max-width: 767px) {
+            .hero-section {
+                height: 135vh;
+                /* Aici schimbi imaginea de fundal pentru mobil */
+                background-image: url("images/about_mobile.jpg");
+            }
+            .mobile-card-content p {
+                text-align: justify;
+            }
+            .left-floating-div-boxx-about-page {
+                padding: 2rem 3rem;
+            }
+        }
         .content-section {
             padding: 100px 20px;
             background-color: #f4f4f4;
