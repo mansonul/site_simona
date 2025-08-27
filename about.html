@@ -13,7 +13,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -21,111 +20,62 @@
     <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- Android Chrome favicons -->
     <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
     <link rel="shortcut icon" href="./images/favicon/favicon.ico">
     <style>
-        /* .hero-section {
-            height: 110vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            background-image: url("images/Simona-Istrate.webp");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        } */
         .hero-section {
-            height: 110vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            /* Imaginea de fundal implicită pentru desktop */
             background-image: url("images/about_desktop.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+            flex-direction: column;
         }
-
-        /* Media query pentru dispozitive mobile */
+        
         @media (max-width: 767px) {
             .hero-section {
-                height: 135vh;
-                /* Aici schimbi imaginea de fundal pentru mobil */
+                /* Am mărit înălțimea pentru a lăsa spațiu pentru card */
+                min-height: 140vh;
                 background-image: url("images/about_mobile.jpg");
+                /* Am eliminat overflow: hidden; */
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end; /* Poziționează conținutul la bază */
             }
             .mobile-card-content p {
                 text-align: justify;
             }
             .left-floating-div-boxx-about-page {
+                position: relative; /* Schimbat de la 'absolute' la 'relative' */
+                bottom: 0;
+                top: auto;
+                left: 0;
+                transform: none;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
                 padding: 2rem 3rem;
+                margin-top: 36rem; /* Asigură că se așează la baza containerului */
             }
         }
-        .content-section {
-            padding: 100px 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
 
-        .content-section p {
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.6;
-            font-size: 1.1em;
-        }
-
-        .section-separator {
-            height: 50vh;
-            /* A section to create more scroll space */
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            color: #666;
-        }
-
-        .left-floating-div-boxx-about-page {
-            transition: all .2s;
-            left: 8%;
-            right: auto;
-            /* background-color: var(--swatch--main--white); */
-            max-width: 625px;
-            margin-left: 0;
-            padding: 3rem 4rem;
-            position: absolute;
-            inset: auto auto auto 3%;
-        }
-
-        .about-marie---feature {
-            background-image: url(https://cdn.prod.website-files.com/5f2ae813361eff3ad9282b29/67000a44ac05a6927ddfa6de_Marie_EIFExperience%20\(1\).webp);
-            background-position: 100% 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-            min-height: 80vh;
-            padding: 0%;
-            display: flex;
-            position: relative;
-        }
-
-        @media (max-width: 767px) {
-            .hero-section {
-                height: 135vh;
+        @media (min-width: 768px) {
+            .left-floating-div-boxx-about-page {
+                position: absolute;
+                left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 625px;
+                padding: 3rem 4rem;
             }
-             .mobile-card-content p {
-                text-align: justify;
-             }
-
-             .left-floating-div-boxx-about-page {
-                padding: 2rem 3rem;
-             }
         }
     </style>
 </head>
@@ -150,8 +100,6 @@
                             style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
                     <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium"
                             style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-                    <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium"
-                            style="font-family: var(--font-body);">INSIGHTS</a></li> -->
                     <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium"
                             style="font-family: var(--font-body);">CONTACT</a></li>
                 </ul>
@@ -176,8 +124,6 @@
                         style="font-family: var(--font-body);">BUSINESS GROWTH</a></li>
                 <li><a href="personal-grow.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
                         style="font-family: var(--font-body);">PERSONAL GROWTH</a></li>
-                <!-- <li><a href="insights.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
-                        style="font-family: var(--font-body);">INSIGHTS</a></li> -->
                 <li><a href="contact.html" class="text-gray-600 hover:text-gray-900 font-medium py-2 block"
                         style="font-family: var(--font-body);">CONTACT</a></li>
             </ul>
@@ -185,6 +131,22 @@
     </header>
 
     <main>
+        <section class="py-16 px-2 sm:px-4 lg:px-6 text-white hero-section"
+            style="background-color: var(--color-background-desktop);">
+            <div id="simona-card" class="mobile-card-content p-4 bg-gray-50 left-floating-div-boxx-about-page">
+                <h3 class="text-2xl font-semibold mb-2"
+                    style="font-family: var(--font-body); color: var(--color-background-desktop);">
+                    Hello, I’m Simona.</h3>
+                <p class="text-xl text-gray-600 text-justify" style="font-family: var(--font-body);">I’ve lived a full life, raising
+                    a child, experiencing love, facing loss, and rebuilding after major life changes. These moments
+                    shaped me and taught me lessons no book ever could. For over 20 years, I’ve led complex projects
+                    with trusted collaborators, supporting growth through thoughtful, personalized approaches always
+                    delivering extraordinary results that exceed both my own and my clients’ expectations. I’ve never
+                    stopped learning, continuously exploring new methods and blending the most effective ones into a
+                    practical, human-centered way of working. My mission is simple: to help people grow, feel seen, and
+                    feel supported, one meaningful step at a time.</p>
+            </div>
+        </section>
 
         <section class="py-16 px-2 bg-white text-gray-800">
             <div class="container px-4 md:px-0 mx-auto max-w-2xl">
@@ -208,23 +170,6 @@
                 <p class="text-xl mb-12 text-justify" style="font-family: var(--font-body);">We partner with businesses
                     and people who are ready for real progress. No fluff. No formulas. Just smart, human-centered
                     strategies that stick.</p>
-            </div>
-        </section>
-
-        <section class="py-16 px-2 sm:px-4 lg:px-6 text-white hero-section"
-            style="background-color: var(--color-background-desktop);">
-            <div class="mobile-card-content p-4 bg-gray-50 left-floating-div-boxx-about-page">
-                <h3 class="text-2xl font-semibold mb-2"
-                    style="font-family: var(--font-body); color: var(--color-background-desktop);">
-                    Hello, I’m Simona.</h3>
-                <p class="text-xl text-gray-600 text-justify" style="font-family: var(--font-body);">I’ve lived a full life, raising
-                    a child, experiencing love, facing loss, and rebuilding after major life changes. These moments
-                    shaped me and taught me lessons no book ever could. For over 20 years, I’ve led complex projects
-                    with trusted collaborators, supporting growth through thoughtful, personalized approaches always
-                    delivering extraordinary results that exceed both my own and my clients’ expectations. I’ve never
-                    stopped learning, continuously exploring new methods and blending the most effective ones into a
-                    practical, human-centered way of working. My mission is simple: to help people grow, feel seen, and
-                    feel supported, one meaningful step at a time.</p>
             </div>
         </section>
 
@@ -325,6 +270,6 @@
     </footer>
 
     <script src="./assets/js/main.js"></script>
+    
 </body>
-
 </html>
